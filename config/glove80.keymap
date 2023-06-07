@@ -282,6 +282,56 @@ macros {
                 , <&to 10>
                 ;
         };
+        ga: ga {
+            label = "ga";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp T>
+                , < &kp LBKT>
+                ;
+        };
+        gi: gi {
+            label = "gi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp G>
+                , < &kp LBKT>
+                ;
+        };
+        gu: gu {
+            label = "gu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp H>
+                , < &kp LBKT>
+                ;
+        };
+        ge: ge {
+            label = "ge";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp QUOTE>
+                , < &kp LBKT>
+                ;
+        };
+        go: go {
+            label = "go";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp B>
+                , < &kp LBKT>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
