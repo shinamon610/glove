@@ -262,8 +262,277 @@ macros {
                 , < &kp LG(N0)>
                 ;
         };
+        ime_on_nagi_win: ime_on_nagi_win {
+            label = "ime_on_nagi_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to 8>
+                ;
+        };
+        ime_on_nagi_mac: ime_on_nagi_mac {
+            label = "ime_on_nagi_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to 10>
+                ;
+        };
+        ga: ga {
+            label = "ga";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp T>
+                , < &kp LBKT>
+                ;
+        };
+        gi: gi {
+            label = "gi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp G>
+                , < &kp LBKT>
+                ;
+        };
+        gu: gu {
+            label = "gu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp H>
+                , < &kp LBKT>
+                ;
+        };
+        ge: ge {
+            label = "ge";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp QUOTE>
+                , < &kp LBKT>
+                ;
+        };
+        go: go {
+            label = "go";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp B>
+                , < &kp LBKT>
+                ;
+        };
+        za: za {
+            label = "za";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp X>
+                , < &kp LBKT>
+                ;
+        };
+        zi: zi {
+            label = "zi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp D>
+                , < &kp LBKT>
+                ;
+        };
+        zu: zu {
+            label = "zu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp R>
+                , < &kp LBKT>
+                ;
+        };
+        ze: ze {
+            label = "ze";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp P>
+                , < &kp LBKT>
+                ;
+        };
+        zo: zo {
+            label = "zo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp C>
+                , < &kp LBKT>
+                ;
+        };
+        da: da {
+            label = "da";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp Q>
+                , < &kp LBKT>
+                ;
+        };
+        di: di {
+            label = "di";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp A>
+                , < &kp LBKT>
+                ;
+        };
+        du: du {
+            label = "du";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp Z>
+                , < &kp LBKT>
+                ;
+        };
+        de: de {
+            label = "de";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp W>
+                , < &kp LBKT>
+                ;
+        };
+        do: do {
+            label = "do";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp S>
+                , < &kp LBKT>
+                ;
+        };
+        ba: ba {
+            label = "ba";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp F>
+                , < &kp LBKT>
+                ;
+        };
+        bi: bi {
+            label = "bi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp V>
+                , < &kp LBKT>
+                ;
+        };
+        bu: bu {
+            label = "bu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp 2>
+                , < &kp LBKT>
+                ;
+        };
+        be: be {
+            label = "be";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp EQUAL>
+                , < &kp LBKT>
+                ;
+        };
+        bo: bo {
+            label = "bo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp MINUS>
+                , < &kp LBKT>
+                ;
+        };
+        pa: pa {
+            label = "pa";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp F>
+                , < &kp RBKT>
+                ;
+        };
+        pi: pi {
+            label = "pi";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp V>
+                , < &kp RBKT>
+                ;
+        };
+        pu: pu {
+            label = "pu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp 2>
+                , < &kp RBKT>
+                ;
+        };
+        pe: pe {
+            label = "pe";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp EQUAL>
+                , < &kp RBKT>
+                ;
+        };
+        po: po {
+            label = "po";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            bindings
+                = < &kp MINUS>
+                , < &kp RBKT>
+                ;
+        };
     };
-
     /* Automatically generated keymap */
     keymap {
         compatible = "zmk,keymap";
@@ -306,7 +575,7 @@ macros {
             bindings = <
       &to 3   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &none        &none
       &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &none
+      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_win
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &kp RALT  &kp RGUI    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
  &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE    &mo 14  &lt 20 TAB  &kp RSHFT    &mo 12  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
@@ -317,7 +586,7 @@ macros {
             bindings = <
       &to 3   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &none        &none
       &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &none
+      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_mac
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA         &sk LGUI  &sk LCTRL    &sk LALT   &kp RALT  &kp RCTRL    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
  &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE     &mo 15  &lt 20 TAB  &kp RSHFT     &mo 13  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
