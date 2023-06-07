@@ -262,6 +262,26 @@ macros {
                 , < &kp LG(N0)>
                 ;
         };
+        ime_on_nagi_win: ime_on_nagi_win {
+            label = "ime_on_nagi_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to 8>
+                ;
+        };
+        ime_on_nagi_mac: ime_on_nagi_mac {
+            label = "ime_on_nagi_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to 10>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
@@ -306,7 +326,7 @@ macros {
             bindings = <
       &to 3   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &none        &none
       &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &none
+      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_win
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &kp RALT  &kp RGUI    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
  &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE    &mo 14  &lt 20 TAB  &kp RSHFT    &mo 12  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
@@ -317,7 +337,7 @@ macros {
             bindings = <
       &to 3   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &none        &none
       &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &none
+      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_mac
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA         &sk LGUI  &sk LCTRL    &sk LALT   &kp RALT  &kp RCTRL    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
  &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE     &mo 15  &lt 20 TAB  &kp RSHFT     &mo 13  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
