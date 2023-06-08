@@ -661,24 +661,24 @@ macros {
         // leyer10
         layer_NaginataMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
+        &none  &none     &gi     &de    &zi     &none                                                                                 &none   &za     &zu     &be     &none  &none
+        &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
+&ime_off_mac    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
+        &none  &di  &kp V      &kp F     &kp B       &kp C   &mo 9  &kp LS(COMMA)  &kp LS(RBKT) &kp LS(NON_US_HASH)  &kp LS(INT3)  &kp LS(DOT)  &kp Q  &kp U  &kp LS(N7)  &kp LS(N8)  &none  &none
+        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 14   &mo 24  &none   &mo 12  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none           
             >;
         };
 
         // layer11
         layer_NaginataShiftMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
+        &none  &none  &ge  &do  &du  &none                                                              &none  &pa  &pi  &pu  &none  &none
+        &none  &kp LBKT  &kp COMMA  &kp L  &kp SLASH  &kp N8                                                  &kp LS(N6)  &kp X  &kp N9  &kp N5 &none  &none
+        &none  &kp P  &kp N1  &kp I  &kp J  &kp A                                                  &kp N7  &kp K  &kp M  &kp 0  &ze  &none
+        &none  &none  &kp LS(N3)  &kp LS(E)  &kp LS(N4)  &kp N  &none  &none  &none  &none  &ba  &go  &kp N6  &bu  &kp NON_US_HASH  &kp N2  &none  &none
+        &none  &none  &bo  &kp LS(N5)  &kp LS(N6)          &none  &none  &none  &none  &bi  &kp ENTER          &gu  &pe  &po  &none  &none
             >;
         };
 
