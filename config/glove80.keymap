@@ -639,10 +639,10 @@ macros {
             bindings = <
         &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
         &none  &none     &gi     &de    &zi     &none                                                                                 &none   &za     &zu     &be     &none  &none
-        &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
+&ime_off_win    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
