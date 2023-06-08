@@ -641,8 +641,8 @@ macros {
         &none  &none     &gi     &de    &zi     &none                                                                                 &none   &za     &zu     &be     &none  &none
         &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
 &ime_off_win    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+        &none  &di  &kp V      &kp F     &kp B       &kp C   &mo 9  &kp LS(COMMA)  &kp LS(RBKT) &kp LS(NON_US_HASH)  &kp LS(INT3)  &kp LS(DOT)  &kp Q  &kp U  &kp LS(N7)  &kp LS(N8)  &none  &none
+        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 14   &mo 24  &none   &mo 12  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none
             >;
         };
 
