@@ -538,8 +538,7 @@ macros {
             #binding-cells = <0>;
             wait-ms = <0>;            
             bindings
-                = < &kp N>
-                , < &kp N>
+                = < &kp N kp N>
                 ;
         };
     };
