@@ -538,7 +538,8 @@ macros {
             #binding-cells = <0>;
             wait-ms = <0>;            
             bindings
-                = < &kp N>
+                = <&macro_tap_time 0>
+                , < &kp N>
                 , < &kp N>
                 ;
         };
