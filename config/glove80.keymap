@@ -633,7 +633,7 @@ macros {
         layer_KanaWin {
             bindings = <
         &none      &none   &none   &none   &none                                                                             &none   &none      &none    &none   &none
-        &none      &none   &none   &none   &none   &none                                                             &none   &none   &none      &none    &none   &none
+        &none      &none   &none   &kp H   &none   &none                                                             &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                             &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
  &ime_off_win  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                             &kp V   &kp A   &kp I      &kp U  &kp DOT   &none
         &none      &none   &kp B   &kp W   &nn   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &none     &kp X   &none      &none    &none   &none
@@ -645,7 +645,7 @@ macros {
         layer_KanaMac {
             bindings = <
         &none      &none   &none   &none   &none                                                                              &none   &none      &none    &none   &none
-        &none      &none   &none   &none   &none   &none                                                              &none   &none   &none      &none    &none   &none
+        &none      &none   &none   &kp H   &none   &none                                                              &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                              &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
  &ime_off_mac  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                              &kp V   &kp A   &kp I      &kp U  &kp DOT   &none
         &none      &none   &kp B   &kp W   &nn   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &none     &kp X   &none      &none    &none   &none
