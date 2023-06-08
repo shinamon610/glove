@@ -635,9 +635,9 @@ macros {
         &none      &none   &none   &none   &none                                                                             &none   &none      &none    &none   &none
         &none      &none   &none   &none   &none   &none                                                             &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                             &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
- &ime_off_win  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                             &kp P   &kp A   &kp I      &kp U  &kp DOT   &none
-        &none      &none   &kp B   &kp W   &kp Z   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &kp X   &kp F   &kp V      &nn    &none   &none
-        &none      &none   &none   &none   &none          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET           &none   &none      &none    &none   &none
+ &ime_off_win  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                             &kp V   &kp A   &kp I      &kp U  &kp DOT   &none
+        &none      &none   &kp B   &kp W   &nn   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &none     &kp X   &none      &none    &none   &none
+        &none      &none   &kp F   &kp P   &kp Z          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET           &none   &none      &none    &none   &none
             >;
         };
 
@@ -647,9 +647,9 @@ macros {
         &none      &none   &none   &none   &none                                                                              &none   &none      &none    &none   &none
         &none      &none   &none   &none   &none   &none                                                              &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                              &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
- &ime_off_mac  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                              &kp P   &kp A   &kp I      &kp U  &kp DOT   &none
-        &none      &none   &kp B   &kp W   &kp Z   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &kp X   &kp F   &kp V      &nn    &none   &none
-        &none      &none   &none   &none   &none          &kp SPACE     &mo 15  &lt 24 TAB   &none  &mo 13  &kp RET           &none   &none      &none    &none   &none
+ &ime_off_mac  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                              &kp V   &kp A   &kp I      &kp U  &kp DOT   &none
+        &none      &none   &kp B   &kp W   &nn   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &none     &kp X   &none      &none    &none   &none
+        &none      &none   &kp F   &kp P   &kp Z          &kp SPACE     &mo 15  &lt 24 TAB   &none  &mo 13  &kp RET           &none   &none      &none    &none   &none
             >;
         };
 
