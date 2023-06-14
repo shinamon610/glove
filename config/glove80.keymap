@@ -611,9 +611,9 @@ macros {
       &to 3   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
-      &kp Q   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &kp Z
+      &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &kp RALT  &kp RGUI    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &none   &kp J             &mt LSHFT SPACE    &mo 14  &lt 24 TAB  &kp RSHFT    &mo 12  &kp RET           &kp V   &ime_on_win  &kp LS(FSLH)   &none        &none
+ &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE    &mo 14  &lt 24 TAB  &kp RSHFT    &mo 12  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
             >;
         };
 
@@ -623,9 +623,9 @@ macros {
       &to 3   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
-      &kp Q   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &kp Z
+      &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &none
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA         &sk LGUI  &sk LCTRL    &sk LALT   &kp RALT  &kp RCTRL    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &none   &kp J             &mt LSHFT SPACE     &mo 15  &lt 24 TAB  &kp RSHFT     &mo 13  &kp RET           &kp V   &ime_on_mac  &kp LS(FSLH)   &none        &none
+ &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE     &mo 15  &lt 24 TAB  &kp RSHFT     &mo 13  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
             >;
         };
 
@@ -636,8 +636,8 @@ macros {
         &none      &none   &none   &kp H   &none   &none                                                             &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                             &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
         &none      &none   &kp K   &kp T   &kp N   &kp D                                                             &kp COMMA   &kp A   &kp I      &kp U    &none   &none
-        &none      &none   &kp B   &kp W   &nn   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &kp DOT     &kp X   &kp F      &kp V    &none   &none
-        &none      &none   &kp P   &ime_off_win   &kp Z          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET    &none   &none      &none    &none   &none
+        &none      &none   &kp B   &kp W   &nn   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &kp DOT     &kp X   &kp V      &none    &none   &none
+        &none      &none   &kp P   &kp F   &kp Z          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET    &none   &none      &none    &none   &none
             >;
         };
 
@@ -648,8 +648,8 @@ macros {
         &none      &none   &none   &kp H   &none   &none                                                              &none   &none   &none      &none    &none   &none
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                              &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
         &none      &none   &kp K   &kp T   &kp N   &kp D                                                              &kp COMMA   &kp A   &kp I      &kp U    &none   &none
-        &none      &none   &kp B   &kp W   &nn   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &kp DOT     &kp X   &kp F      &kp V    &none   &none
-        &none      &none   &kp P   &ime_off_mac   &kp Z          &kp SPACE     &mo 15  &lt 24 TAB   &none  &mo 13  &kp RET    &none   &none      &none    &none   &none
+        &none      &none   &kp B   &kp W   &nn   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &kp DOT     &kp X   &kp V      &none &none   &none
+        &none      &none   &kp P   &kp F   &kp Z          &kp SPACE     &mo 15  &lt 24 TAB   &none  &mo 13  &kp RET    &none   &none      &none    &none   &none
             >;
         };
 
@@ -719,8 +719,8 @@ macros {
   &none   &none        &none   &none             &none                                                                               &none   &none      &none   &none   &none
   &none   &none        &none   &none             &none    &none                                                            &none     &none   &none      &none   &none   &none
   &none  &kp N3       &kp N2  &kp N1            &kp N0   &kp N4                                                           &kp N7    &kp N6  &kp N5     &kp N9  &kp N8   &none
- &trans  &trans     &kp LGUI  &mo 16  &esc_ime_off_win  &kp TAB                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &henkan_win  &mo 18            &mo 20   &trans  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
+ &trans  &trans     &kp LGUI  &mo 16  &esc_ime_off_win  &ime_on_win                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+ &trans  &trans  &henkan_win  &mo 18            &mo 20   &ime_off_win  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
  &trans  &trans       &trans  &trans            &trans           &kp LSHFT    &mo 22    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
         };
@@ -731,8 +731,8 @@ macros {
  &trans  &trans         &trans  &trans            &trans                                                                               &trans  &trans     &trans  &trans  &trans
  &trans  &trans         &trans  &trans            &trans   &trans                                                            &trans    &trans  &trans     &trans  &trans  &trans
  &trans  &kp N3         &kp N2  &kp N1            &kp N0   &kp N4                                                            &kp N7    &kp N6  &kp N5     &kp N9  &kp N8  &trans
- &trans  &trans  &kp LA(SPACE)  &mo 17  &esc_ime_off_mac  &kp TAB                                                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans    &henkan_mac  &mo 19            &mo 21   &trans   &kp LGUI  &kp LCTRL  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
+ &trans  &trans  &kp LA(SPACE)  &mo 17  &esc_ime_off_mac  &ime_on_mac                                                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+ &trans  &trans    &henkan_mac  &mo 19            &mo 21   &ime_off_mac &kp LGUI  &kp LCTRL  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
  &trans  &trans         &trans  &trans            &trans           &kp LSHFT     &mo 23    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
         };
