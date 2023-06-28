@@ -26,7 +26,7 @@
 
 / {
     /* Glove80 system behavior & macros */
-    &mo{
+    &mt{
         tapping-term-ms=<0>;
     };
     behaviors {
