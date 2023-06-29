@@ -36,9 +36,6 @@
             tapping-term-ms = <200>;
             bindings = <&mo 1>, <&to 1>;
         };
-        &sk {
-            quick-release;
-        };
     };
 
     macros {
@@ -568,6 +565,9 @@ macros {
         };
     };
 
+        &sk {
+            quick-release;
+        };
     /* Automatically generated keymap */
     keymap {
         compatible = "zmk,keymap";
