@@ -45,6 +45,15 @@
             retro-tap;
             bindings = <&kp>, <&kp>;
         };
+        rmo: retro_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RETRO_MO";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -631,7 +640,7 @@ macros {
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &kp RALT  &skq RSHFT    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE    &mo 14  &lt 24 TAB  &kp RGUI    &mo 12  &gqt &mo 7 RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
+ &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE    &mo 14  &lt 24 TAB  &kp RGUI    &mo 12  &rmo 7 RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
             >;
         };
 
