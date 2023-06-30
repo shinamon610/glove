@@ -43,6 +43,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
+            retro-tap;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
