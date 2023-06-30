@@ -50,7 +50,6 @@
             label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
             flavor = "balanced";
-            retro-tap;
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
