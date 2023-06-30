@@ -768,7 +768,7 @@ macros {
         layer_EditWin {
             bindings = <
          &trans      &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
-         &trans      &trans              &trans        &trans            &trans         &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+         &trans      &trans              &trans        &kp LG(LS(S))  &kp LG(PSCRN)         &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
          &trans      &trans           &kp LC(W)  &kp LC(FSLH)  &toggle_fold_win  &fold_all_win                                                  &trans  &trans  &trans  &trans  &trans  &trans
  &kp LC(LS(N3))  &kp LA(F4)  &window_change_win     &kp LC(C)         &kp LC(V)      &kp LC(S)                                                  &none  &kp LC(LA(DOWN))  &kp LC(LA(UP))  &none  &trans  &trans
  &kp LC(LS(N4))      &trans              &mo 27     &kp LC(Y)         &kp LC(X)      &kp LC(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
