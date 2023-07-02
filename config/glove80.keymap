@@ -27,32 +27,32 @@
 #define ORIGINAL_BASE 0
 #define ORIGINAL_LOWER 1
 #define ORIGINAL_MAGIC 2
-#define LAYER_BASEWIN 3
-#define LAYER_BASEMAC 4
-#define LAYER_KANAWIN 5
-#define LAYER_KANAMAC 6
-#define LAYER_SYMBOL 7
-#define LAYER_NAGINATAWIN 8
-#define LAYER_NAGINATESHIFTWIN 9
-#define LAYER_NAGINATAMAC 10
-#define LAYER_NAGINATASHIFTMAC 11
-#define LAYER_UTILWIN  12
-#define LAYER_UTILMAC 13
-#define LAYER_EDITWIN 14
-#define LAYER_EDITMAC 15
-#define LAYER_WORDWIN 16
-#define LAYER_WORDMAC 17
-#define LAYER_LINEWIN 18
-#define LAYER_LINEMAC 19
-#define LAYER_TABPAGEWIN 20
-#define LAYER_TABPAGEMAC 21
-#define LAYER_BROWSERWIN 22
-#define LAYER_BROWSERMAC 23
-#define LAYER_FUNC 24
-#define LAYER_WINDOWCHANGEWIN 25
-#define LAYER_WINDOWCHANGEMAC 26
-#define LAYER_WINDOWMOVEWIN 27
-#define LAYER_WINDOWMOVEMAC 28
+#define BASEWIN 3
+#define BASEMAC 4
+#define KANAWIN 5
+#define KANAMAC 6
+#define SYMBOL 7
+#define NAGINATAWIN 8
+#define NAGINATESHIFTWIN 9
+#define NAGINATAMAC 10
+#define NAGINATASHIFTMAC 11
+#define UTILWIN  12
+#define UTILMAC 13
+#define EDITWIN 14
+#define EDITMAC 15
+#define WORDWIN 16
+#define WORDMAC 17
+#define LINEWIN 18
+#define LINEMAC 19
+#define TABPAGEWIN 20
+#define TABPAGEMAC 21
+#define BROWSERWIN 22
+#define BROWSERMAC 23
+#define FUNC 24
+#define WINDOWCHANGEWIN 25
+#define WINDOWCHANGEMAC 26
+#define WINDOWMOVEWIN 27
+#define WINDOWMOVEMAC 28
 
 
 / {
@@ -188,7 +188,7 @@ macros {
             wait-ms = <0>;            
             bindings
                 = <&kp LANG2>
-                , <&to LAYER_BASEWIN>
+                , <&to BASEWIN>
                 ;
         };
         ime_off_mac: ime_off_mac {
@@ -198,7 +198,7 @@ macros {
             wait-ms = <0>;            
             bindings
                 = <&kp LANG2>
-                , <&to 4>
+                , <&to BASEMAC>
                 ;
         };
         esc_ime_off_win: esc_ime_off_win {
@@ -209,7 +209,7 @@ macros {
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
-                , <&to LAYER_BASEWIN>
+                , <&to BASEWIN>
                 ;
         };
         esc_ime_off_mac: esc_ime_off_mac {
@@ -220,7 +220,7 @@ macros {
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
-                , <&to 4>
+                , <&to BASEMAC>
                 ;
         };
         window_change_win: window_change_win {
@@ -608,7 +608,7 @@ macros {
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 0>
-                , <&to 4>
+                , <&to BASEMAC>
                 ;
         };
         bt_1_win: bt_1_win {
@@ -618,7 +618,7 @@ macros {
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 1>
-                , <&to LAYER_BASEWIN>
+                , <&to BASEWIN>
                 ;
         };
     };
@@ -630,7 +630,7 @@ macros {
         // layer0
         layer_Base {
             bindings = <
-      &to LAYER_BASEWIN   &to 4  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
+      &to BASEWIN   &to BASEMAC  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
   &kp EQUAL  &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp LS(LALT)  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
     &kp TAB   &kp Q   &kp W     &kp E      &kp R   &kp T                                                                         &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
     &kp ESC   &kp A   &kp S     &kp D      &kp F   &kp G                                                                         &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
@@ -666,7 +666,7 @@ macros {
         // layer3
         layer_BaseWin {
             bindings = <
-      &to LAYER_BASEWIN   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
+      &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
@@ -678,7 +678,7 @@ macros {
         // layer4
         layer_BaseMac {
             bindings = <
-      &to LAYER_BASEWIN   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
+      &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &none
