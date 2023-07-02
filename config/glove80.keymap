@@ -772,7 +772,7 @@ macros {
          &trans      &trans           &kp LC(W)  &kp LC(FSLH)  &toggle_fold_win  &fold_all_win                                                  &trans  &trans  &trans  &trans  &trans  &trans
  &kp LC(LS(N3))  &kp LA(F4)  &window_change_win     &kp LC(C)         &kp LC(V)      &kp LC(S)                                                  &none  &kp LC(LA(DOWN))  &kp LC(LA(UP))  &none  &trans  &trans
  &kp LC(LS(N4))      &trans              &mo 27     &kp LC(Y)         &kp LC(X)      &kp LC(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-         &trans      &trans              &trans        &trans         &kp LG(V)                 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+         &trans      &trans              &trans        &trans         &kp LG(V)                 &trans  &trans  &trans  &trans  &trans  &mo 24          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -784,7 +784,7 @@ macros {
  &trans     &trans           &kp LG(W)  &kp LG(FSLH)  &toggle_fold_mac  &fold_all_mac                                                  &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &kp LG(Q)  &window_change_mac     &kp LG(C)         &kp LG(V)      &kp LG(S)                                                  &trans  &kp LG(LA(DOWN))  &kp LG(LA(UP))  &trans  &trans  &trans
  &trans     &trans              &mo 28     &kp LG(Y)         &kp LG(X)      &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans              &trans        &trans     &kp LG(LS(V))                 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+ &trans     &trans              &trans        &trans     &kp LG(LS(V))                 &trans  &trans  &trans  &trans  &trans  &mo 24          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
