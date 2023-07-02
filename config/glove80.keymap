@@ -777,7 +777,7 @@ macros {
   &none   &none        &none   &none             &none                                                                               &none   &none      &none   &none   &none
   &none   &none        &none   &none             &none    &none                                                            &none     &none   &none      &none   &none   &none
   &none  &none       &kp N2  &kp N1            &kp N0   &kp N4                                                           &kp N7    &kp N6  &kp N5     &kp N9  &none  &none
- &trans  &kp N3     &none  &mo 16  &esc_ime_off_win  &ime_on_win                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N8  &trans
+ &trans  &kp N3     &none  &mo WORDWIN  &esc_ime_off_win  &ime_on_win                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N8  &trans
  &trans  &trans  &henkan_win  &mo 18            &mo 20   &ime_off_win  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &kp LGUI     &trans  &trans  &trans
  &trans  &trans       &trans  &trans            &trans           &kp LSHFT    &mo 22    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
