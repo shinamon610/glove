@@ -188,7 +188,7 @@ macros {
             wait-ms = <0>;            
             bindings
                 = <&kp LANG2>
-                , <&to 3>
+                , <&to LAYER_BASEWIN>
                 ;
         };
         ime_off_mac: ime_off_mac {
@@ -209,7 +209,7 @@ macros {
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
-                , <&to 3>
+                , <&to LAYER_BASEWIN>
                 ;
         };
         esc_ime_off_mac: esc_ime_off_mac {
@@ -618,7 +618,7 @@ macros {
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 1>
-                , <&to 3>
+                , <&to LAYER_BASEWIN>
                 ;
         };
     };
@@ -630,7 +630,7 @@ macros {
         // layer0
         layer_Base {
             bindings = <
-      &to 3   &to 4  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
+      &to LAYER_BASEWIN   &to 4  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
   &kp EQUAL  &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp LS(LALT)  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
     &kp TAB   &kp Q   &kp W     &kp E      &kp R   &kp T                                                                         &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
     &kp ESC   &kp A   &kp S     &kp D      &kp F   &kp G                                                                         &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
@@ -666,7 +666,7 @@ macros {
         // layer3
         layer_BaseWin {
             bindings = <
-      &to 3   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
+      &to LAYER_BASEWIN   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
@@ -678,7 +678,7 @@ macros {
         // layer4
         layer_BaseMac {
             bindings = <
-      &to 3   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
+      &to LAYER_BASEWIN   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
       &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &none
