@@ -178,7 +178,7 @@ macros {
             wait-ms = <0>;            
             bindings
                 = <&kp LANG1>
-                , <&to 6>
+                , <&to KANAMAC>
                 ;
         };
         ime_off_win: ime_off_win {
@@ -277,7 +277,7 @@ macros {
             bindings
                 = < &kp LANG1>
                 , < &kp LANG1>
-                , < &to 6>
+                , < &to KANAMAC>
                 ;
         };
         toggle_fold_win: toggle_fold_win {
