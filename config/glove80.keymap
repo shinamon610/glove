@@ -808,26 +808,26 @@
         };
 
             // layer15
-            layer_EditMac {
-                bindings = <
-    &trans     &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
- &trans     &trans      &kp LG(LS(N5))  &kp LG(LS(N4))   &kp LG(LS(N3))  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans           &kp LG(W)  &kp LG(FSLH)  &toggle_fold_mac  &fold_all_mac                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp LG(Q)  &window_change_mac     &kp LG(C)         &kp LG(V)      &kp LG(S)                                                  &trans  &kp LG(LA(DOWN))  &kp LG(LA(UP))  &trans  &trans  &trans
- &trans     &trans              &mo WINDOWMOVEMAC     &kp LG(Y)         &kp LG(X)      &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans              &trans        &trans     &kp LG(LS(V))                 &trans  &trans  &trans  &trans  &trans  &mo FUNC          &trans  &trans  &trans  &trans  &trans
+        layer_EditMac {
+            bindings = <
+            &trans     &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
+            &trans     &trans      &kp LG(LS(N5))  &kp LG(LS(N4))   &kp LG(LS(N3))  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans     &trans           &kp LG(W)  &kp LG(FSLH)  &toggle_fold_mac  &fold_all_mac                                                  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans  &kp LG(Q)  &window_change_mac     &kp LG(C)         &kp LG(V)      &kp LG(S)                                                  &trans  &kp LG(LA(DOWN))  &kp LG(LA(UP))  &trans  &trans  &trans
+            &trans     &trans              &mo WINDOWMOVEMAC     &kp LG(Y)         &kp LG(X)      &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            &trans     &trans              &trans        &trans     &kp LG(LS(V))                 &trans  &trans  &trans  &trans  &trans  &mo FUNC          &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         // layer16
         layer_WordWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LC(LEFT)     &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LC(BSPC)     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LC(LEFT)     &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LC(BSPC)     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
             >;
         };
 
