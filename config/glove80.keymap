@@ -882,24 +882,24 @@
         // layer21
         layer_TabpageMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(PG_DN)  &kp LA(PG_UP)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                                &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(PG_DN)  &kp LA(PG_UP)  &kp LC(PG_DN)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                        &trans         &trans         &trans  &trans  &trans
             >;
         };
 
         // layer22
         layer_BrowserWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
             >;
         };
 
