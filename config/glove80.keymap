@@ -834,24 +834,24 @@
         // layer17
         layer_WordMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LA(LEFT)     &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LA(BSPC)     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LA(LEFT)     &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LA(BSPC)     &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
             >;
         };
 
         // layer18
         layer_LineWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp HOME       &kp LC(END)  &kp LC(HOME)  &kp END  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &delete_line_win        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans        &trans   &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                                 &trans        &trans   &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp HOME       &kp LC(END)  &kp LC(HOME)  &kp END  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &delete_line_win        &trans   &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans        &trans   &trans  &trans  &trans
             >;
         };
 
