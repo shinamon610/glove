@@ -858,24 +858,24 @@
         // layer19
         layer_LineMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LG(BSPC)      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans      &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                                 &trans      &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LG(BSPC)      &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans      &trans         &trans  &trans  &trans
             >;
         };
 
         // layer20
         layer_TabpageWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
             >;
         };
 
