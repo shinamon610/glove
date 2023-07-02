@@ -23,7 +23,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-// layer define
+
 #define ORIGINAL_BASE 0
 #define ORIGINAL_LOWER 1
 #define ORIGINAL_MAGIC 2
@@ -627,7 +627,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // layer0
+        
         layer_Base {
             bindings = <
             &to BASEWIN   &to BASEMAC  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
@@ -639,7 +639,7 @@
             >;
         };
 
-        // layer1
+        
         layer_Lower {
             bindings = <
             &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT         &kp C_PP                                                                                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
@@ -651,7 +651,6 @@
             >;
         };
 
-        //layer2
         layer_Magic {
             bindings = <
             &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
@@ -663,7 +662,7 @@
             >;
         };
 
-        // layer3
+        
         layer_BaseWin {
             bindings = <
             &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
@@ -675,7 +674,7 @@
             >;
         };
 
-        // layer4
+        
         layer_BaseMac {
             bindings = <
             &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                             &none   &none         &none   &bt_0_mac        &bt_1_win
@@ -687,7 +686,7 @@
             >;
         };
 
-        // layer5
+        
         layer_KanaWin {
             bindings = <
             &none      &none   &none   &none   &none                                                                             &none   &none      &none    &bt_0_mac        &bt_1_win
@@ -699,7 +698,7 @@
             >;
         };
 
-        // layer6
+        
         layer_KanaMac {
             bindings = <
             &none      &none   &none   &none   &none                                                                              &none   &none      &none    &bt_0_mac        &bt_1_win
@@ -711,7 +710,7 @@
             >;
         };
 
-        // layer7
+        
         layer_Symbol {
             bindings = <
             &none         &none          &none          &none        &none                                                                                   &none          &none                &none         &none   &none
@@ -723,7 +722,7 @@
             >;
         };
 
-        // layer8
+        
         layer_NaginataWin {
             bindings = <
             &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
@@ -735,7 +734,7 @@
             >;
         };
 
-        // layer9
+        
         layer_NaginateShiftWin {
             bindings = <
             &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
@@ -747,7 +746,6 @@
             >;
         };
 
-        // leyer10
         layer_NaginataMac {
             bindings = <
             &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
@@ -759,7 +757,7 @@
             >;
         };
 
-        // layer11
+        
         layer_NaginataShiftMac {
             bindings = <
             &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
@@ -771,7 +769,7 @@
             >;
         };
 
-        // layer12
+        
         layer_UtilWin {
             bindings = <
             &none   &none        &none   &none             &none                                                                               &none   &none      &none   &none   &none
@@ -783,7 +781,6 @@
             >;
         };
 
-        //layer13
         layer_UtilMac {
             bindings = <
             &trans  &trans         &trans  &trans            &trans                                                                               &trans  &trans     &trans  &trans  &trans
@@ -795,7 +792,7 @@
             >;
         };
 
-        // layer14
+        
         layer_EditWin {
             bindings = <
             &trans      &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
@@ -807,7 +804,7 @@
             >;
         };
 
-            // layer15
+            
         layer_EditMac {
             bindings = <
             &trans     &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
@@ -819,7 +816,7 @@
             >;
         };
 
-        // layer16
+        
         layer_WordWin {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
@@ -831,7 +828,7 @@
             >;
         };
 
-        // layer17
+        
         layer_WordMac {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
@@ -843,7 +840,7 @@
             >;
         };
 
-        // layer18
+        
         layer_LineWin {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                                 &trans        &trans   &trans  &trans  &trans
@@ -855,7 +852,7 @@
             >;
         };
 
-        // layer19
+        
         layer_LineMac {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                                 &trans      &trans         &trans  &trans  &trans
@@ -867,7 +864,7 @@
             >;
         };
 
-        // layer20
+        
         layer_TabpageWin {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
@@ -879,7 +876,7 @@
             >;
         };
 
-        // layer21
+        
         layer_TabpageMac {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                                &trans         &trans         &trans  &trans  &trans
@@ -891,7 +888,7 @@
             >;
         };
 
-        // layer22
+        
         layer_BrowserWin {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
@@ -903,7 +900,7 @@
             >;
         };
 
-        // layer23
+        
         layer_BrowserMac {
             bindings = <
             &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
@@ -915,7 +912,7 @@
             >;
         };
 
-        // layer24
+        
         layer_Func {
             bindings = <
             &trans  &trans  &trans   &trans   &trans                                                                        &trans        &trans  &trans   &trans  &trans
@@ -927,7 +924,7 @@
             >;
         };
 
-        // layer25
+        
         layer_WindowChangeWin {
             bindings = <
             &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
@@ -939,7 +936,7 @@
             >;
         };
 
-        // layer26
+        
         layer_WindowChangeMac {
             bindings = <
             &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
@@ -951,7 +948,7 @@
             >;
         };
 
-        // layer27
+        
         layer_WindowMoveWin {
             bindings = <
             &trans  &trans  &trans  &trans      &trans                                                                               &trans         &trans         &trans  &trans  &trans
@@ -963,7 +960,7 @@
             >;
         };
 
-        // layer28
+        
         layer_WindowMoveMac {
             bindings = <
             &trans  &trans  &trans  &trans         &trans                                                                                      &trans          &trans             &trans  &trans  &trans
