@@ -930,48 +930,48 @@
         // layer25
         layer_WindowChangeWin {
             bindings = <
- &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
         };
 
         // layer26
         layer_WindowChangeMac {
             bindings = <
- &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &kp DOWN     &kp UP  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &kp DOWN     &kp UP  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
+            &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
         };
 
         // layer27
         layer_WindowMoveWin {
             bindings = <
- &trans  &trans  &trans  &trans      &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &kp LG(UP)  &trans                                                  &kp LG(LEFT)  &kp LG(PG_DN)  &kp LG(PG_UP)  &kp LG(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans      &trans                                                                               &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &kp LG(UP)  &trans                                                  &kp LG(LEFT)  &kp LG(PG_DN)  &kp LG(PG_UP)  &kp LG(RIGHT)  &trans  &trans
+            &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans
+            &trans  &trans  &trans  &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
             >;
         };
 
         // layer28
         layer_WindowMoveMac {
             bindings = <
- &trans  &trans  &trans  &trans         &trans                                                                                      &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &kp LA(LG(F))  &trans                                                  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(UP))  &kp LA(LG(RIGHT))  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans                              &trans          &trans             &trans  &trans  &trans
+            &trans  &trans  &trans  &trans         &trans                                                                                      &trans          &trans             &trans  &trans  &trans
+            &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
+            &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
+            &trans  &trans  &trans  &trans  &kp LA(LG(F))  &trans                                                  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(UP))  &kp LA(LG(RIGHT))  &trans  &trans
+            &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans            &trans          &trans             &trans  &trans  &trans
+            &trans  &trans  &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans                              &trans          &trans             &trans  &trans  &trans
             >;
         };
 
