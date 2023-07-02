@@ -168,7 +168,7 @@ macros {
             wait-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 5>
+                , <&to KANAWIN>
                 ;
         };
         ime_on_mac: ime_on_mac {
@@ -266,7 +266,7 @@ macros {
             wait-ms = <0>;            
             bindings
                 = < &kp INT4>
-                , < &to 5>
+                , < &to KANAWIN>
                 ;
         };
         henkan_mac: henkan_mac {
