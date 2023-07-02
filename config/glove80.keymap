@@ -32,27 +32,28 @@
 #define KANAWIN 5
 #define KANAMAC 6
 #define SYMBOLWIN 7
-#define NAGINATAWIN 8
-#define NAGINATESHIFTWIN 9
-#define NAGINATAMAC 10
-#define NAGINATASHIFTMAC 11
-#define UTILWIN  12
-#define UTILMAC 13
-#define EDITWIN 14
-#define EDITMAC 15
-#define WORDWIN 16
-#define WORDMAC 17
-#define LINEWIN 18
-#define LINEMAC 19
-#define TABPAGEWIN 20
-#define TABPAGEMAC 21
-#define BROWSERWIN 22
-#define BROWSERMAC 23
-#define FUNC 24
-#define WINDOWCHANGEWIN 25
-#define WINDOWCHANGEMAC 26
-#define WINDOWMOVEWIN 27
-#define WINDOWMOVEMAC 28
+#define SYMBOLMAC 8
+#define NAGINATAWIN 9
+#define NAGINATESHIFTWIN 10
+#define NAGINATAMAC 11
+#define NAGINATASHIFTMAC 12
+#define UTILWIN  13
+#define UTILMAC 14
+#define EDITWIN 15
+#define EDITMAC 16
+#define WORDWIN 17
+#define WORDMAC 18
+#define LINEWIN 19
+#define LINEMAC 20
+#define TABPAGEWIN 21
+#define TABPAGEMAC 22
+#define BROWSERWIN 23
+#define BROWSERMAC 24
+#define FUNC 25
+#define WINDOWCHANGEWIN 26
+#define WINDOWCHANGEMAC 27
+#define WINDOWMOVEWIN 28
+#define WINDOWMOVEMAC 29
 
 
 / {
@@ -718,6 +719,17 @@
             &none    &kp LS(N7)  &kp LS(COMMA)  &kp LS(MINUS)  &kp LS(DOT)      &kp LBKT                                                  &kp LS(N3)      &kp RBKT   &kp LS(INT1)      &kp NON_US_HASH  &kp LS(FSLH)   &none
             &none      &kp INT1     &kp LS(N8)      &kp MINUS   &kp LS(N9)  &kp LS(SEMI)                                                  &kp LS(N5)  &kp LS(RBKT)       &kp SEMI  &kp LS(NON_US_HASH)  &kp LS(LBKT)   &none
             &none  &kp LA(INT3)    &kp LS(SQT)        &kp SQT     &kp FSLH    &kp LS(N4)   &none   &none   &none   &none   &none   &none   &kp EQUAL  &kp LS(INT3)  &kp LS(EQUAL)           &kp LS(N6)         &none   &none
+            &none         &none          &none          &none        &none                 &none   &none   &none   &none   &none   &none                     &none          &none                &none         &none   &none
+            >;
+        };
+
+        layer_SymbolMAC {
+            bindings = <
+            &none         &none          &none          &none        &none                                                                                   &none          &none                &none         &none   &none
+            &none         &none          &none          &none        &none         &none                                                       &none         &none          &none                &none         &none   &none
+            &none    &kp LS(N7)  &kp LS(COMMA)  &kp LS(MINUS)  &kp LS(DOT)      &kp LBKT                                                  &kp LS(N3)      &kp RBKT   &kp LS(INT1)      &kp NON_US_HASH  &kp LS(FSLH)   &none
+            &none      &kp LA(INT3)     &kp LS(N8)      &kp MINUS   &kp LS(N9)  &kp LS(SEMI)                                                  &kp LS(N5)  &kp LS(RBKT)       &kp SEMI  &kp LS(NON_US_HASH)  &kp LS(LBKT)   &none
+            &none  &kp INT1    &kp LS(SQT)        &kp SQT     &kp FSLH    &kp LS(N4)   &none   &none   &none   &none   &none   &none   &kp EQUAL  &kp LS(INT3)  &kp LS(EQUAL)           &kp LS(N6)         &none   &none
             &none         &none          &none          &none        &none                 &none   &none   &none   &none   &none   &none                     &none          &none                &none         &none   &none
             >;
         };
