@@ -789,7 +789,7 @@ macros {
  &trans  &trans         &trans  &trans            &trans                                                                               &trans  &trans     &trans  &trans  &trans
  &trans  &trans         &trans  &trans            &trans   &trans                                                            &trans    &trans  &trans     &trans  &trans  &trans
  &trans  &none         &kp N2  &kp N1            &kp N0   &kp N4                                                            &kp N7    &kp N6  &kp N5     &kp N9   &none   &kp LG(LS(N5))
- &kp LG(LS(N3))  &kp N3  &none  &mo 17  &esc_ime_off_mac  &ime_on_mac                                                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N8  &kp LG(LS(N4))
+ &kp LG(LS(N3))  &kp N3  &none  &mo WORDMAC  &esc_ime_off_mac  &ime_on_mac                                                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp N8  &kp LG(LS(N4))
  &trans  &trans    &henkan_mac  &mo 19            &mo 21   &ime_off_mac &kp LGUI  &kp LCTRL  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &kp LA(SPACE)  &trans  &trans  &trans
  &trans  &trans         &trans  &trans            &trans           &kp LSHFT     &mo 23    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
             >;
