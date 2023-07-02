@@ -160,7 +160,7 @@
     };
 
     /* Custom Defined Behaviors */
-macros {
+    macros {
         ime_on_win: ime_on_win {
             label = "ime_on_win";
             compatible = "zmk,behavior-macro";
