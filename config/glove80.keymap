@@ -671,7 +671,7 @@ macros {
       &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
       &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
       &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &skq RALT  &skq RGUI    &skq RCTRL   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE &rmo 14 TAB  &mo 24  &skq RSHFT    &mo 12  &rmo SYMBOL RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
+ &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE &rmo 14 TAB  &mo 24  &skq RSHFT    &mo UTILWIN  &rmo SYMBOL RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
             >;
         };
 
@@ -695,7 +695,7 @@ macros {
         &none      &none   &kp M   &kp R   &kp S   &kp H                                                             &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
         &none      &none   &kp K   &kp T   &kp N   &kp D                                                             &kp DOT   &kp A   &kp I      &kp U    &none   &none
         &none      &none   &kp B   &kp W   &nn   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo SYMBOL   &kp COMMA    &kp X   &kp V      &none    &none   &none
-        &none      &none   &kp P   &kp F   &kp Z          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET    &none   &none      &none    &none   &none
+        &none      &none   &kp P   &kp F   &kp Z          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo UTILWIN  &kp RET    &none   &none      &none    &none   &none
             >;
         };
 
@@ -731,7 +731,7 @@ macros {
         &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
 &ime_off_win    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
         &none  &di  &kp V      &kp F     &kp B       &kp C   &mo NAGINATESHIFTWIN  &kp LS(COMMA)  &kp LS(RBKT) &kp LS(NON_US_HASH)  &kp LS(INT3)  &kp LS(DOT)  &kp Q  &kp U  &kp LS(N7)  &kp LS(N8)  &none  &none
-        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 14   &mo 24  &none   &mo 12  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none
+        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 14   &mo 24  &none   &mo UTILWIN  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none
             >;
         };
 
