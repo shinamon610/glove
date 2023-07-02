@@ -229,10 +229,10 @@ macros {
             #binding-cells = <0>;
             wait-ms = <0>;            
             bindings
-                = <&macro_press &kp LALT &mo 25>
+                = <&macro_press &kp LALT &mo WINDOWCHANGEWIN>
                 , <&macro_tap &kp TAB>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp LALT &mo 25>
+                , <&macro_release &kp LALT &mo WINDOWCHANGEWIN>
                 ;
         };
         window_change_mac: window_change_mac {
