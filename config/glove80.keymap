@@ -337,7 +337,7 @@ macros {
             wait-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 10>
+                , <&to NAGINATAMAC>
                 ;
         };
         ga: ga {
