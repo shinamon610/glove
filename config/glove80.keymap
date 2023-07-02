@@ -666,12 +666,12 @@
         // layer3
         layer_BaseWin {
             bindings = <
-      &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
-      &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
-      &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
-      &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &skq RALT  &skq RGUI    &skq RCTRL   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE &rmo EDITWIN TAB  &mo FUNC  &skq RSHFT    &mo UTILWIN  &rmo SYMBOL RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
+            &to BASEWIN   &to BASEMAC       &to 0     &none   &none                                                                                           &none   &none         &none   &bt_0_mac        &bt_1_win
+            &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
+            &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
+            &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &none
+            &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &skq RALT  &skq RGUI    &skq RCTRL   &kp W   &kp F   &kp L         &kp P   &none        &none
+            &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &gqt LSHFT SPACE &rmo EDITWIN TAB  &mo FUNC  &skq RSHFT    &mo UTILWIN  &rmo SYMBOL RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
             >;
         };
 
