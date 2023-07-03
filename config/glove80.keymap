@@ -739,24 +739,24 @@
         
         layer_NaginataWin {
             bindings = <
-                        &none &none    &none     &none     &none                                                                                                            &none      &none      &none      &none        &none
-                        &none &none    &none     &none     &none    &none                                                                                             &none &none      &none      &none      &none        &none
-                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                         &kp Y &kp O      &kp DOT    &kp R      &none        &none
-                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                             &kp H &kp N3     &kp E      &kp N4     &kp LS(RBKT) &none
-                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &none            &none    &none      &none       &sl NAGINATADHWIN &kp Q &kp U      &kp LS(N7) &kp LS(N8) &none        &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN &kp ENTER               &kp LS(N3) &kp LS(N9) &kp LS(E)  &none        &none
+                        &none &none    &none     &none     &none                                                                                                                    &none  &none      &none      &none      &none
+                        &none &none    &none     &none     &none    &none                                                                                                     &none &none  &none      &none      &none      &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                                 &kp Y &kp O  &kp DOT    &kp R      &none      &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                     &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &kp LS(RBKT)     &none    &none      &kp LS(NON_US_HASH) &sl NAGINATADHWIN &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
         
         layer_NaginataShiftWin {
             bindings = <
-                        &none &none &none      &none      &none                                                                        &none        &none           &none  &none               &none
-                        &none &none &none      &none      &none      &none                                                  &none      &none        &none           &none  &none               &none
-                        &none &none &kp COMMA  &kp L      &kp SLASH  &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5 &kp RBKT            &none
-                        &none &kp P &kp N1     &kp I      &kp J      &kp A                                                  &kp N7     &kp K        &kp M           &kp N0 &kp LS(NON_US_HASH) &none
-                        &none &none &kp LS(N4) &kp LS(N0) &kp LS(N5) &kp N  &none &none &none &none &none         &none     &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2 &kp LBKT               &none
-                        &none &none &none      &none      &none             &none &none &none &none &kp LS(COMMA) &kp ENTER            &none        &none           &none  &none               &none
+                        &none &none &none     &none &none                                                                       &none        &none           &none      &none      &none
+                        &none &none &none     &none &none     &none                                                  &none      &none        &none           &none      &none      &none
+                        &none &none &kp COMMA &kp L &kp SLASH &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5     &kp RBKT   &none
+                        &none &kp P &kp N1    &kp I &kp J     &kp A                                                  &kp N7     &kp K        &kp M           &kp N0     &kp LS(N8) &none
+                        &none &none &none     &none &none     &none  &none &none &none &none &none         &da       &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2     &kp LBKT   &none
+                        &none &none &none     &none &none            &none &none &none &none &kp LS(COMMA) &kp ENTER            &kp LS(N3)   &kp LS(E)       &kp LS(N4) &none      &none
             >;
         };
 
@@ -766,31 +766,30 @@
                         &none &none &none &none &none &none                                               &none &none &none &none &none &none
                         &none &none &gi   &de   &zi   &di                                                 &za   &be   &zu   &none &none &none
                         &none &ze   &ge   &do   &ga   &du                                                 &gu   &pa   &pi   &pu   &pe   &none
-                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &da   &bo   &po   &bu   &none &none
-                        &none &none &none &none &none       &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
+                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &none &none &none &none &none &none
+                        &none &none &bo   &po   &bu         &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
             >;
         };
-
         layer_NaginataMac {
             bindings = <
-                        &none &none    &none     &none     &none                                                                                                            &none      &none      &none      &none        &none
-                        &none &none    &none     &none     &none    &none                                                                                             &none &none      &none      &none      &none        &none
-                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                         &kp Y &kp O      &kp DOT    &kp R      &none        &none
-                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                             &kp H &kp N3     &kp E      &kp N4     &kp LS(RBKT) &none
-                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &none            &none    &none      &none       &sl NAGINATADHMAC &kp Q &kp U      &kp LS(N7) &kp LS(N8) &none        &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &mo FUNC &skq RSHFT &mo UTILMAC &kp ENTER               &kp LS(N3) &kp LS(N9) &kp LS(E)  &none        &none
+                        &none &none    &none     &none     &none                                                                                                                    &none  &none      &none      &none      &none
+                        &none &none    &none     &none     &none    &none                                                                                                     &none &none  &none      &none      &none      &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                                 &kp Y &kp O  &kp DOT    &kp R      &none      &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                     &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &kp LS(RBKT)     &none    &none      &kp LS(NON_US_HASH) &sl NAGINATADHMAC &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &mo FUNC &skq RSHFT &mo UTILMAC         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
         
         layer_NaginataShiftMac {
             bindings = <
-                        &none &none &none      &none      &none                                                                        &none        &none           &none  &none               &none
-                        &none &none &none      &none      &none      &none                                                  &none      &none        &none           &none  &none               &none
-                        &none &none &kp COMMA  &kp L      &kp SLASH  &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5 &kp RBKT            &none
-                        &none &kp P &kp N1     &kp I      &kp J      &kp A                                                  &kp N7     &kp K        &kp M           &kp N0 &kp LS(NON_US_HASH) &none
-                        &none &none &kp LS(N4) &kp LS(N0) &kp LS(N5) &kp N  &none &none &none &none &none         &none     &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2 &kp LBKT               &none
-                        &none &none &none      &none      &none             &none &none &none &none &kp LS(COMMA) &kp ENTER            &none        &none           &none  &none               &none
+                        &none &none &none     &none &none                                                                       &none        &none           &none      &none      &none
+                        &none &none &none     &none &none     &none                                                  &none      &none        &none           &none      &none      &none
+                        &none &none &kp COMMA &kp L &kp SLASH &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5     &kp RBKT   &none
+                        &none &kp P &kp N1    &kp I &kp J     &kp A                                                  &kp N7     &kp K        &kp M           &kp N0     &kp LS(N8) &none
+                        &none &none &none     &none &none     &none  &none &none &none &none &none         &da       &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2     &kp LBKT   &none
+                        &none &none &none     &none &none            &none &none &none &none &kp LS(COMMA) &kp ENTER            &kp LS(N3)   &kp LS(E)       &kp LS(N4) &none      &none
             >;
         };
 
@@ -800,10 +799,11 @@
                         &none &none &none &none &none &none                                               &none &none &none &none &none &none
                         &none &none &gi   &de   &zi   &di                                                 &za   &be   &zu   &none &none &none
                         &none &ze   &ge   &do   &ga   &du                                                 &gu   &pa   &pi   &pu   &pe   &none
-                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &da   &bo   &po   &bu   &none &none
-                        &none &none &none &none &none       &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
+                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &none &none &none &none &none &none
+                        &none &none &bo   &po   &bu         &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
             >;
         };
+
         
         layer_UtilWin {
             bindings = <
