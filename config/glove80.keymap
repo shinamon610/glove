@@ -358,6 +358,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp G>
                 , < &kp LBKT>
@@ -368,6 +369,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp H>
                 , < &kp LBKT>
@@ -378,6 +380,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp SINGLE_QUOTE>
                 , < &kp LBKT>
@@ -388,6 +391,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp B>
                 , < &kp LBKT>
@@ -398,6 +402,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp X>
                 , < &kp LBKT>
@@ -408,6 +413,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp D>
                 , < &kp LBKT>
@@ -418,6 +424,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp R>
                 , < &kp LBKT>
@@ -428,6 +435,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp P>
                 , < &kp LBKT>
@@ -438,6 +446,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp C>
                 , < &kp LBKT>
@@ -448,6 +457,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp Q>
                 , < &kp LBKT>
@@ -458,6 +468,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp A>
                 , < &kp LBKT>
@@ -468,6 +479,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp Z>
                 , < &kp LBKT>
@@ -478,6 +490,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp W>
                 , < &kp LBKT>
@@ -488,6 +501,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp S>
                 , < &kp LBKT>
@@ -498,6 +512,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp F>
                 , < &kp LBKT>
@@ -508,6 +523,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp V>
                 , < &kp LBKT>
@@ -518,6 +534,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp N2>
                 , < &kp LBKT>
@@ -528,6 +545,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp EQUAL>
                 , < &kp LBKT>
@@ -538,6 +556,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp MINUS>
                 , < &kp LBKT>
@@ -548,6 +567,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp F>
                 , < &kp RBKT>
@@ -558,6 +578,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp V>
                 , < &kp RBKT>
@@ -568,6 +589,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp N2>
                 , < &kp RBKT>
@@ -578,6 +600,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp EQUAL>
                 , < &kp RBKT>
@@ -588,6 +611,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp MINUS>
                 , < &kp RBKT>
@@ -598,6 +622,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&macro_tap_time 0>
                 , < &kp N>
