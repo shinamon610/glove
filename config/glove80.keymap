@@ -751,12 +751,12 @@
         
         layer_NaginataShiftWin {
             bindings = <
-                        &none &none    &none      &none      &none                                                              &none &none           &none  &none &none
-                        &none &none    &ge        &do        &du        &none                                        &none      &pa   &pi             &pu    &none &none
-                        &none &kp LBKT &kp COMMA  &kp L      &kp SLASH  &kp N8                                       &kp LS(N6) &kp X &kp N9          &kp N5 &none &none
-                        &none &kp P    &kp N1     &kp I      &kp J      &kp A                                        &kp N7     &kp K &kp M           &kp 0  &ze   &none
-                        &none &none    &kp LS(N3) &kp LS(E)  &kp LS(N4) &kp N  &none &none &none &none &ba &go       &kp N6     &bu   &kp NON_US_HASH &kp N2 &none &none
-                        &none &none    &bo        &kp LS(N5) &kp LS(N6)        &none &none &none &none &bi &kp ENTER            &gu   &pe             &po    &none &none
+                        &none &none &none      &none     &none                                                                        &none        &none           &none  &none               &none
+                        &none &none &none      &none     &none      &none                                                  &none      &none        &none           &none  &none               &none
+                        &none &none &kp COMMA  &kp L     &kp SLASH  &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5 &kp RBKT            &none
+                        &none &kp P &kp N1     &kp I     &kp J      &kp A                                                  &kp N7     &kp K        &kp M           &kp 0  &kp LS(NON_US_HASH) &none
+                        &none &none &kp LS(N4) &kp LS(0) &kp LS(N5) &kp N  &none &none &none &none &none         &none     &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2 &none               &none
+                        &none &none &none      &none     &none             &none &none &none &none &kp LS(COMMA) &kp ENTER            &none        &none           &none  &none               &none
             >;
         };
 
