@@ -739,12 +739,12 @@
         
         layer_NaginataWin {
             bindings = <
-                        &none &none    &none      &none    &none                                                                                &none     &none      &none      &none        &none
-                        &none &none    &none      &none    &none     &none                                                                &none &none     &none      &none      &none        &none
-                        &none &none    &kp G      &kp W    &kp D     &kp LS(Z)                                                            &kp Y &kp O     &kp DOT    &kp R      &none        &none
-                        &none &kp INT1 &kp SQT    &kp S    &kp T     &kp Z                                                                &kp H &kp N3    &kp E      &kp N4     &kp LS(RBKT) &none
-                        &none &none    &kp V      &kp F    &kp B     &kp C     &none     &none       &none    &none &none       &none     &kp Q &kp U     &kp LS(N7) &kp LS(N8) &none        &none
-                        &none &none    &kp LS(N0) &kp INT1 &kp MINUS           &kp SPACE &mo EDITWIN &mo FUNC &none &mo UTILWIN &kp ENTER       &kp EQUAL &ga        &da        &none        &none
+                        &none &none    &none     &none     &none                                                                                                                          &none     &none      &none      &none        &none
+                        &none &none    &none     &none     &none    &none                                                                                                           &none &none     &none      &none      &none        &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                                       &kp Y &kp O     &kp DOT    &kp R      &none        &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                           &kp H &kp N3    &kp E      &kp N4     &kp LS(RBKT) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &none                       &none            &none    &none      &none       &none                    &kp Q &kp U     &kp LS(N7) &kp LS(N8) &none        &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &rmo NAGINATASHIFTWIN SPACE &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN &rmo NAGINATADHWIN ENTER       &kp EQUAL &ga        &da        &none        &none
             >;
         };
 
