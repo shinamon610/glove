@@ -349,8 +349,7 @@
             #binding-cells = <0>;
             wait-ms = <0>;            
             bindings
-                = < &kp T>
-                , < &kp LBKT>
+                = < &kp T &kp LBKT>
                 ;
         };
         gi: gi {
