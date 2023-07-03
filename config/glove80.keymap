@@ -739,12 +739,12 @@
         
         layer_NaginataWin {
             bindings = <
-                        &none &none    &none     &none     &none                                                                                                              &none     &none      &none      &none        &none
-                        &none &none    &none     &none     &none    &none                                                                                               &none &none     &none      &none      &none        &none
-                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                           &kp Y &kp O     &kp DOT    &kp R      &none        &none
-                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                               &kp H &kp N3    &kp E      &kp N4     &kp LS(RBKT) &none
-                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &none            &none    &none      &none       &sl NAGINATADHWIN &kp Q &kp U     &kp LS(N7) &kp LS(N8) &none        &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE             &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN &kp ENTER                &kp EQUAL &ga        &da        &none        &none
+                        &none &none    &none     &none     &none                                                                                                            &none      &none      &none      &none        &none
+                        &none &none    &none     &none     &none    &none                                                                                             &none &none      &none      &none      &none        &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                         &kp Y &kp O      &kp DOT    &kp R      &none        &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                             &kp H &kp N3     &kp E      &kp N4     &kp LS(RBKT) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &none            &none    &none      &none       &sl NAGINATADHWIN &kp Q &kp U      &kp LS(N7) &kp LS(N8) &none        &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN &kp ENTER               &kp LS(N3) &kp LS(N9) &kp LS(E)  &none        &none
             >;
         };
 
@@ -773,12 +773,12 @@
 
         layer_NaginataMac {
             bindings = <
-                        &none &none    &none     &none     &none                                                                                                              &none     &none      &none      &none        &none
-                        &none &none    &none     &none     &none    &none                                                                                               &none &none     &none      &none      &none        &none
-                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                           &kp Y &kp O     &kp DOT    &kp R      &none        &none
-                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                               &kp H &kp N3    &kp E      &kp N4     &kp LS(RBKT) &none
-                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &none            &none    &none      &none       &sl NAGINATADHMAC &kp Q &kp U     &kp LS(N7) &kp LS(N8) &none        &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE             &rmo EDITMAC TAB &mo FUNC &skq RSHFT &mo UTILMAC &kp ENTER                &kp EQUAL &ga        &da        &none        &none
+                        &none &none    &none     &none     &none                                                                                                            &none      &none      &none      &none        &none
+                        &none &none    &none     &none     &none    &none                                                                                             &none &none      &none      &none      &none        &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                         &kp Y &kp O      &kp DOT    &kp R      &none        &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                             &kp H &kp N3     &kp E      &kp N4     &kp LS(RBKT) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &none            &none    &none      &none       &sl NAGINATADHMAC &kp Q &kp U      &kp LS(N7) &kp LS(N8) &none        &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &mo FUNC &skq RSHFT &mo UTILMAC &kp ENTER               &kp LS(N3) &kp LS(N9) &kp LS(E)  &none        &none
             >;
         };
 
