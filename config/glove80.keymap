@@ -810,8 +810,8 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &none     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &mo FUNC  &none &none                          &mo SYMBOLWIN &kp COMMA &kp X &kp V &none     &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win_kana 0 0 &kp RET                 &none &none &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &mo FUNC  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win_kana 0 0 &rmo SYMBOLWIN RET                 &none &none &none     &none     &none
             >;
         };
 
@@ -822,8 +822,8 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &none     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &mo FUNC  &none &none                          &mo SYMBOLMAC &kp COMMA &kp X &kp V &none     &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac_kana 0 0 &kp RET                 &none &none &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &mo FUNC  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac_kana 0 0 &rmo SYMBOLMAC RET                 &none &none &none     &none     &none
             >;
         };
 
