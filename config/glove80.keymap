@@ -108,24 +108,6 @@
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_mac>;
         };
-        rmo_esc_ime_off_win_kana: rmo_esc_ime_off_win_kana {
-            compatible = "zmk,behavior-hold-tap";
-            label = "rmo_esc_ime_off_win_kana";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <0>;
-            retro-tap;
-            bindings = <&mo>, <&esc_ime_off_win>;
-        };
-        rmo_esc_ime_off_mac_kana: rmo_esc_ime_off_mac_kana {
-            compatible = "zmk,behavior-hold-tap";
-            label = "rmo_esc_ime_off_mac_kana";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <0>;
-            retro-tap;
-            bindings = <&mo>, <&esc_ime_off_mac>;
-        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -1042,7 +1024,7 @@
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &none     &none
                         &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &none     &none &none                         &none              &kp COMMA &kp X &kp V &none     &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win_kana UTILWINKANA 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win UTILWINKANA 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
             >;
         };
 
@@ -1054,7 +1036,7 @@
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &none     &none
                         &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &none     &none &none                         &none              &kp COMMA &kp X &kp V &none     &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac_kana UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
 
