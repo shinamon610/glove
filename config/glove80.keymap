@@ -678,6 +678,7 @@
                 = < &ime_off_win>
                 , < &kp N0>
                 , < &ime_on_win>
+                ,<&mo UTILWINKANA>
                 ;
         };
         k1win: k1win {
@@ -690,6 +691,7 @@
                 = < &ime_off_win>
                 , < &kp N1>
                 , < &ime_on_win>
+                , <&mo UTILWINKANA>
                 ;
         };
         k2win: k2win {
