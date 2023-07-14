@@ -187,6 +187,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
                 , <&to KANAWIN>
@@ -197,6 +198,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
                 , <&to KANAMAC>
@@ -207,6 +209,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&to BASEWIN>
@@ -217,6 +220,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&to BASEMAC>
@@ -227,6 +231,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
@@ -238,6 +243,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
@@ -249,6 +255,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&macro_press &kp LALT &mo WINDOWCHANGEWIN>
                 , <&macro_tap &kp TAB>
@@ -261,6 +268,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&macro_press &kp LGUI &mo WINDOWCHANGEMAC>
                 , <&macro_tap &kp TAB>
@@ -273,6 +281,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp HOME>
@@ -285,6 +294,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp INT4>
                 , < &to KANAWIN>
@@ -295,6 +305,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LANG1>
                 , < &kp LANG1>
@@ -306,6 +317,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LC(K)>
                 , < &kp LC(L)>
@@ -316,6 +328,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LC(K)>
                 , < &kp LC(N0)>
@@ -326,6 +339,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LG(K)>
                 , < &kp LG(L)>
@@ -336,6 +350,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LG(K)>
                 , < &kp LG(N0)>
@@ -346,6 +361,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
                 , <&to NAGINATAWIN>
@@ -356,6 +372,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
                 , <&to NAGINATAMAC>
@@ -774,7 +791,7 @@
                         &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                                      &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
                         &none &kp INT1     &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                                  &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
                         &none &kp LA(INT3) &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none       &none        &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
-                        &none &none        &none         &none         &none                    &ime_on_win &ime_off_win &none &none &none &none            &none        &none         &none               &none        &none
+                        &none &none        &none         &none         &none                    &none &none &none &none &none &none            &none        &none         &none               &none        &none
             >;
         };
 
@@ -785,7 +802,7 @@
                         &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                                      &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
                         &none &kp LA(INT3) &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                                  &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
                         &none &kp INT1     &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none       &none        &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
-                        &none &none        &none         &none         &none                    &ime_on_mac &ime_off_mac &none &none &none &none            &none        &none         &none               &none        &none
+                        &none &none        &none         &none         &none                    &none &none &none &none &none &none            &none        &none         &none               &none        &none
             >;
         };
 
@@ -863,8 +880,8 @@
                         &none &none  &none       &none       &none                                                                              &none    &none    &none     &none  &none
                         &none &none  &none       &none       &none          &none                                                      &none    &none    &none    &none     &none  &none
                         &none &none  &kp N2      &kp N1      &kp N0         &kp N4                                                     &kp N7   &kp N6   &kp N5   &kp N9    &none  &none
-                        &none &kp N3 &none       &mo WORDWIN &none          &none                                                      &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
-                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none  &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
+                        &none &kp N3 &none       &mo WORDWIN &none          &ime_on_win                                                      &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
+                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &ime_off_win  &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
                         &none &none  &none       &none       &none                 &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none  &none
             >;
         };
@@ -874,8 +891,8 @@
                         &none          &none  &none       &none       &none                                                                              &none    &none         &none     &none  &none
                         &none          &none  &none       &none       &none          &none                                                      &none    &none    &none         &none     &none  &none
                         &none          &none  &kp N2      &kp N1      &kp N0         &kp N4                                                     &kp N7   &kp N6   &kp N5        &kp N9    &none  &kp LG(LS(N5))
-                        &kp LG(LS(N3)) &kp N3 &none       &mo WORDMAC &none          &none                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &kp LG(LS(N4))
-                        &none          &none  &henkan_mac &mo LINEMAC &mo TABPAGEMAC &none  &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
+                        &kp LG(LS(N3)) &kp N3 &none       &mo WORDMAC &none          &ime_on_mac                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &kp LG(LS(N4))
+                        &none          &none  &henkan_mac &mo LINEMAC &mo TABPAGEMAC &ime_off_mac &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
                         &none          &none  &none       &none       &none                 &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none  &none
             >;
         };
