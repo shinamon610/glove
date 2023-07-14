@@ -661,7 +661,10 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &kp N kp N>;
+                = <&macro_tap_time 0>
+                , < &kp N>
+                , < &kp N>
+                ;
         };
         bt_0_mac: bt_0_mac {
             label = "bt_0_mac";
