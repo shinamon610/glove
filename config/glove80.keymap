@@ -722,7 +722,7 @@
                 , <&to BASEWIN>
                 ;
         };
-        k0win: k1win {
+        k0win: k0win {
             label = "k0win";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -840,6 +840,18 @@
                 = < &ime_off_win>
                 , < &kp N9>
                 , < &ime_on_win>
+                ;
+        };
+        k0mac: k0mac {
+            label = "k0mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N0>
+                , < &ime_on_mac>
                 ;
         };
         k1mac: k1mac {
