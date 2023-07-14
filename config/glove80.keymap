@@ -124,24 +124,6 @@
             retro-tap;
             bindings = <&ime_off_util_on_mac>, <&esc_ime_off_mac>;
         };
-        rmo_ime_on_win: rmo_ime_on_win {
-            compatible = "zmk,behavior-hold-tap";
-            label = "rmo_ime_on_win";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <0>;
-            retro-tap;
-            bindings = <&mo>, <&ime_on_win>;
-        };
-        rmo_ime_on_mac: rmo_ime_on_mac {
-            compatible = "zmk,behavior-hold-tap";
-            label = "rmo_ime_on_mac";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <0>;
-            retro-tap;
-            bindings = <&mo>, <&ime_on_mac>;
-        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
