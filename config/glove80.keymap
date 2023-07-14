@@ -95,7 +95,9 @@
             flavor = "hold-preferred";
             tapping-term-ms = <0>;
             retro-tap;
-            bindings = <&mo>, <&esc_ime_off_win>;
+            bindings = <&mo>, <&esc_ime_off_win>
+                    , <&kp A>    
+                    ;
         };
         rmo_esc_ime_off_mac: rmo_esc_ime_off_mac {
             compatible = "zmk,behavior-hold-tap";
