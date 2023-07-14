@@ -675,10 +675,9 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &ime_off_win>
+                = < &kp LANG2>
                 , < &kp N0>
-                , < &ime_on_win>
-                ,<&mo UTILWINKANA>
+                , < &kp LANG1>
                 ;
         };
         k1win: k1win {
@@ -688,10 +687,9 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &ime_off_win>
+                = < &kp LANG2>
                 , < &kp N1>
-                , < &ime_on_win>
-                , <&mo UTILWINKANA>
+                , < &kp LANG1>
                 ;
         };
         k2win: k2win {
