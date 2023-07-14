@@ -24,6 +24,42 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
+#define ORIGINAL_BASE 0
+#define ORIGINAL_LOWER 1
+#define ORIGINAL_MAGIC 2
+#define BASEWIN 3
+#define BASEMAC 4
+#define KANAWIN 5
+#define KANAMAC 6
+#define SYMBOLWIN 7
+#define SYMBOLMAC 8
+#define NAGINATAWIN 9
+#define NAGINATASHIFTWIN 10
+#define NAGINATADHWIN 11
+#define NAGINATAMAC 12
+#define NAGINATASHIFTMAC 13
+#define NAGINATADHMAC 14
+#define UTILWIN  15
+#define UTILMAC 16
+#define UTILWINKANA  17
+#define UTILMACKANA 18
+#define EDITWIN 19
+#define EDITMAC 20
+#define WORDWIN 21
+#define WORDMAC 22
+#define LINEWIN 23
+#define LINEMAC 24
+#define TABPAGEWIN 25
+#define TABPAGEMAC 26
+#define BROWSERWIN 27
+#define BROWSERMAC 28
+#define FUNC 29
+#define WINDOWCHANGEWIN 30
+#define WINDOWCHANGEMAC 31
+#define WINDOWMOVEWIN 32
+#define WINDOWMOVEMAC 33
+
+
 / {
     /* Glove80 system behavior & macros */
     behaviors {
@@ -34,8 +70,53 @@
             label = "LAYER_TAP_DANCE";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+            bindings = <&mo ORIGINAL_LOWER>, <&to ORIGINAL_LOWER>;
         };
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            retro-tap;
+            bindings = <&kp>, <&kp>;
+        };
+        rmo: retro_mo {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RETRO_MO";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            retro-tap;
+            bindings = <&mo>, <&kp>;
+        };
+        rmo_esc_ime_off_win: rmo_esc_ime_off_win {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_esc_ime_off_win";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&esc_ime_off_win>;
+        };
+        rmo_esc_ime_off_mac: rmo_esc_ime_off_mac {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_esc_ime_off_mac";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&esc_ime_off_mac>;
+        };
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            release-after-ms = <1000>;
+            quick-release;
+            ignore-modifiers;
+      };
     };
 
     macros {
@@ -102,15 +183,16 @@
     };
 
     /* Custom Defined Behaviors */
-macros {
+    macros {
         ime_on_win: ime_on_win {
             label = "ime_on_win";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 5>
+                , <&to KANAWIN>
                 ;
         };
         ime_on_mac: ime_on_mac {
@@ -118,9 +200,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 6>
+                , <&to KANAMAC>
                 ;
         };
         ime_off_win: ime_off_win {
@@ -128,9 +211,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
-                , <&to 3>
+                , <&to BASEWIN>
                 ;
         };
         ime_off_mac: ime_off_mac {
@@ -138,9 +222,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
-                , <&to 4>
+                , <&to BASEMAC>
                 ;
         };
         esc_ime_off_win: esc_ime_off_win {
@@ -148,10 +233,11 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
-                , <&to 3>
+                , <&to BASEWIN>
                 ;
         };
         esc_ime_off_mac: esc_ime_off_mac {
@@ -159,10 +245,11 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&kp LANG2>
                 , <&kp ESC>
-                , <&to 4>
+                , <&to BASEMAC>
                 ;
         };
         window_change_win: window_change_win {
@@ -170,11 +257,12 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = <&macro_press &kp LALT &mo 25>
+                = <&macro_press &kp LALT &mo WINDOWCHANGEWIN>
                 , <&macro_tap &kp TAB>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp LALT &mo 25>
+                , <&macro_release &kp LALT &mo WINDOWCHANGEWIN>
                 ;
         };
         window_change_mac: window_change_mac {
@@ -182,11 +270,12 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = <&macro_press &kp LGUI &mo 26>
+                = <&macro_press &kp LGUI &mo WINDOWCHANGEMAC>
                 , <&macro_tap &kp TAB>
                 , <&macro_pause_for_release>
-                , <&macro_release &kp LGUI &mo 26>
+                , <&macro_release &kp LGUI &mo WINDOWCHANGEMAC>
                 ;
         };
         delete_line_win: delete_line_win {
@@ -194,6 +283,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = <&macro_press &kp LSHFT>
                 , <&macro_tap &kp HOME>
@@ -206,9 +296,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp INT4>
-                , < &to 5>
+                , < &to KANAWIN>
                 ;
         };
         henkan_mac: henkan_mac {
@@ -216,10 +307,11 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LANG1>
                 , < &kp LANG1>
-                , < &to 6>
+                , < &to KANAMAC>
                 ;
         };
         toggle_fold_win: toggle_fold_win {
@@ -227,6 +319,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LC(K)>
                 , < &kp LC(L)>
@@ -237,6 +330,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LC(K)>
                 , < &kp LC(N0)>
@@ -247,6 +341,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LG(K)>
                 , < &kp LG(L)>
@@ -257,6 +352,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LG(K)>
                 , < &kp LG(N0)>
@@ -267,9 +363,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 8>
+                , <&to NAGINATAWIN>
                 ;
         };
         ime_on_nagi_mac: ime_on_nagi_mac {
@@ -277,9 +374,10 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;
+            tap-ms = <0>;
             bindings
                 = <&kp LANG1>
-                , <&to 10>
+                , <&to NAGINATAMAC>
                 ;
         };
         ga: ga {
@@ -287,9 +385,9 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = < &kp T>
-                , < &kp LBKT>
+                = < &kp T &kp LBKT>
                 ;
         };
         gi: gi {
@@ -297,6 +395,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp G>
                 , < &kp LBKT>
@@ -307,6 +406,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp H>
                 , < &kp LBKT>
@@ -317,6 +417,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp SINGLE_QUOTE>
                 , < &kp LBKT>
@@ -327,6 +428,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp B>
                 , < &kp LBKT>
@@ -337,6 +439,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp X>
                 , < &kp LBKT>
@@ -347,6 +450,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp D>
                 , < &kp LBKT>
@@ -357,6 +461,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp R>
                 , < &kp LBKT>
@@ -367,6 +472,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp P>
                 , < &kp LBKT>
@@ -377,6 +483,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp C>
                 , < &kp LBKT>
@@ -387,6 +494,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp Q>
                 , < &kp LBKT>
@@ -397,6 +505,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp A>
                 , < &kp LBKT>
@@ -407,6 +516,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp Z>
                 , < &kp LBKT>
@@ -417,6 +527,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp W>
                 , < &kp LBKT>
@@ -427,6 +538,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp S>
                 , < &kp LBKT>
@@ -437,6 +549,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp F>
                 , < &kp LBKT>
@@ -447,6 +560,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp V>
                 , < &kp LBKT>
@@ -457,8 +571,9 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = < &kp 2>
+                = < &kp N2>
                 , < &kp LBKT>
                 ;
         };
@@ -467,6 +582,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp EQUAL>
                 , < &kp LBKT>
@@ -477,6 +593,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp MINUS>
                 , < &kp LBKT>
@@ -487,6 +604,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp F>
                 , < &kp RBKT>
@@ -497,6 +615,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp V>
                 , < &kp RBKT>
@@ -507,8 +626,9 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = < &kp 2>
+                = < &kp N2>
                 , < &kp RBKT>
                 ;
         };
@@ -517,6 +637,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp EQUAL>
                 , < &kp RBKT>
@@ -527,6 +648,7 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
                 = < &kp MINUS>
                 , < &kp RBKT>
@@ -537,8 +659,278 @@ macros {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
+            tap-ms = <0>;
             bindings
-                = < &kp N kp N>
+                = < &kp N kp N>;
+        };
+        bt_0_mac: bt_0_mac {
+            label = "bt_0_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>
+                , <&bt BT_SEL 0>
+                , <&to BASEMAC>
+                ;
+        };
+        bt_1_win: bt_1_win {
+            label = "bt_1_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>
+                , <&bt BT_SEL 1>
+                , <&to BASEWIN>
+                ;
+        };
+        bt_2_win: bt_2_win {
+            label = "bt_2_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>
+                , <&bt BT_SEL 2>
+                , <&to BASEWIN>
+                ;
+        };
+        k0win: k0win {
+            label = "k0win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N0>
+                , < &ime_on_win>
+                ;
+        };
+        k1win: k1win {
+            label = "k1win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N1>
+                , < &ime_on_win>
+                ;
+        };
+        k2win: k2win {
+            label = "k2win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N2>
+                , < &ime_on_win>
+                ;
+        };
+        k3win: k3win {
+            label = "k3win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N3>
+                , < &ime_on_win>
+                ;
+        };
+        k4win: k4win {
+            label = "k4win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N4>
+                , < &ime_on_win>
+                ;
+        };
+        k5win: k5win {
+            label = "k5win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N5>
+                , < &ime_on_win>
+                ;
+        };
+        k6win: k6win {
+            label = "k6win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N6>
+                , < &ime_on_win>
+                ;
+        };
+        k7win: k7win {
+            label = "k7win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N7>
+                , < &ime_on_win>
+                ;
+        };
+        k8win: k8win {
+            label = "k8win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N8>
+                , < &ime_on_win>
+                ;
+        };
+        k9win: k9win {
+            label = "k9win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_win>
+                , < &kp N9>
+                , < &ime_on_win>
+                ;
+        };
+        k0mac: k0mac {
+            label = "k0mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N0>
+                , < &ime_on_mac>
+                ;
+        };
+        k1mac: k1mac {
+            label = "k1mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N1>
+                , < &ime_on_mac>
+                ;
+        };
+        k2mac: k2mac {
+            label = "k2mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N2>
+                , < &ime_on_mac>
+                ;
+        };
+        k3mac: k3mac {
+            label = "k3mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N3>
+                , < &ime_on_mac>
+                ;
+        };
+        k4mac: k4mac {
+            label = "k4mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N4>
+                , < &ime_on_mac>
+                ;
+        };
+        k5mac: k5mac {
+            label = "k5mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N5>
+                , < &ime_on_mac>
+                ;
+        };
+        k6mac: k6mac {
+            label = "k6mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N6>
+                , < &ime_on_mac>
+                ;
+        };
+        k7mac: k7mac {
+            label = "k7mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N3>
+                , < &ime_on_mac>
+                ;
+        };
+        k8mac: k8mac {
+            label = "k8mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N8>
+                , < &ime_on_mac>
+                ;
+        };
+        k9mac: k9mac {
+            label = "k9mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &ime_off_mac>
+                , < &kp N9>
+                , < &ime_on_mac>
                 ;
         };
     };
@@ -547,351 +939,401 @@ macros {
     keymap {
         compatible = "zmk,keymap";
 
-        // layer0
+        
         layer_Base {
             bindings = <
-      &to 3   &to 4  &kp F3    &kp F4     &kp F5                                                                                        &kp F6     &kp F7    &kp F8    &kp F9    &kp F10
-  &kp EQUAL  &kp N1  &kp N2    &kp N3     &kp N4  &kp N5                                                                  &kp LS(LALT)  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-    &kp TAB   &kp Q   &kp W     &kp E      &kp R   &kp T                                                                         &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-    &kp ESC   &kp A   &kp S     &kp D      &kp F   &kp G                                                                         &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-  &kp GRAVE   &kp Z   &kp X     &kp C      &kp V   &kp B  &kp LSHFT  &kp LCTRL    &lower  &kp LGUI  &kp RCTRL  &kp RSHFT         &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp PG_UP
- &magic 2 0  &kp F1  &kp F2  &kp LEFT  &kp RIGHT           &kp BSPC    &kp DEL  &kp LALT  &kp RALT    &kp RET  &kp SPACE                &kp UP   &kp DOWN  &kp LBKT  &kp RBKT  &kp PG_DN
+                        &to BASEWIN &to BASEMAC &kp F3 &kp F4   &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
+                        &kp EQUAL   &kp N1      &kp N2 &kp N3   &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+                        &kp TAB     &kp Q       &kp W  &kp E    &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                        &kp ESC     &kp A       &kp S  &kp D    &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                        &kp GRAVE   &kp Z       &kp X  &kp C    &kp V     &kp B  &kp LSHFT &kp LCTRL &lower   &kp LGUI &kp RCTRL &kp RSHFT &kp N        &kp M  &kp COMMA &kp DOT  &kp FSLH &kp PG_UP
+                        &magic 2 0  &kp F1      &kp F2 &kp LEFT &kp RIGHT        &kp BSPC  &kp DEL   &kp LALT &kp RALT &kp RET   &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp PG_DN
             >;
         };
 
-        // layer1
+        
         layer_Lower {
             bindings = <
- &kp C_BRI_DN  &kp C_BRI_UP      &kp C_PREV      &kp C_NEXT         &kp C_PP                                                                                    &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &none  &kp PAUSE_BREAK
-       &trans         &none           &none           &none            &none   &kp HOME                                                   &kp LEFT_PARENTHESIS  &kp KP_NUM  &kp KP_EQUAL  &kp KP_SLASH  &kp KP_MULTIPLY  &kp PRINTSCREEN
-       &trans         &none           &none    &kp UP_ARROW           &kp AT    &kp END                                                  &kp RIGHT_PARENTHESIS   &kp KP_N7     &kp KP_N8     &kp KP_N9     &kp KP_MINUS   &kp SCROLLLOCK
-       &trans         &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_UP                                                            &kp PERCENT   &kp KP_N4     &kp KP_N5     &kp KP_N6      &kp KP_PLUS            &none
-       &trans     &kp K_APP           &none         &kp F11          &kp F12  &kp PG_DN  &trans  &trans   &to 0  &trans  &trans  &trans              &kp COMMA   &kp KP_N1     &kp KP_N2     &kp KP_N3     &kp KP_ENTER           &trans
-   &magic 2 0      &kp CAPS         &kp INS         &kp F11          &kp F12             &trans  &trans  &trans  &trans  &trans  &trans                          &kp KP_N0     &kp KP_N0    &kp KP_DOT     &kp KP_ENTER           &trans
+                        &kp C_BRI_DN &kp C_BRI_UP &kp C_PREV     &kp C_NEXT     &kp C_PP                                                                                        &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none           &kp PAUSE_BREAK
+                        &none        &none        &none          &none          &none           &kp HOME                                                  &kp LEFT_PARENTHESIS  &kp KP_NUM &kp KP_EQUAL &kp KP_SLASH &kp KP_MULTIPLY &kp PRINTSCREEN
+                        &none        &none        &none          &kp UP_ARROW   &kp AT          &kp END                                                   &kp RIGHT_PARENTHESIS &kp KP_N7  &kp KP_N8    &kp KP_N9    &kp KP_MINUS    &kp SCROLLLOCK
+                        &none        &none        &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &kp PG_UP                                                 &kp PERCENT           &kp KP_N4  &kp KP_N5    &kp KP_N6    &kp KP_PLUS     &none
+                        &none        &kp K_APP    &none          &kp F11        &kp F12         &kp PG_DN &none &none &to ORIGINAL_BASE &none &none &none &kp COMMA             &kp KP_N1  &kp KP_N2    &kp KP_N3    &kp KP_ENTER    &none
+                        &magic 2 0   &kp CAPS     &kp INS        &kp F11        &kp F12                   &none &none &none             &none &none &none                       &kp KP_N0  &kp KP_N0    &kp KP_DOT   &kp KP_ENTER    &none
             >;
         };
 
-        //layer2
         layer_Magic {
             bindings = <
-  &bt BT_CLR            &none            &none            &none            &none                                                                                  &none   &none   &none   &none  &bt BT_CLR_ALL
-       &none            &none            &none            &none            &none            &none                                                         &none   &none   &none   &none   &none           &none
-       &none  &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                         &none   &none   &none   &none   &none           &none
- &bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                         &none   &none   &none   &none   &none     &bootloader
-      &reset            &none            &none            &none            &none            &none   &bt_2   &bt_3         &none   &none   &none   &none   &none   &none   &none   &none   &none          &reset
-       &none            &none            &none            &none            &none                    &bt_0   &bt_1  &out OUT_USB   &none   &none   &none           &none   &none   &none   &none           &none
+                        &bt BT_CLR  &none           &none           &none           &none                                                                            &none &none &none &none &bt BT_CLR_ALL
+                        &none       &none           &none           &none           &none           &none                                                      &none &none &none &none &none &none
+                        &none       &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                            &none &none &none &none &none &none
+                        &bootloader &rgb_ug RGB_SPD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                            &none &none &none &none &none &bootloader
+                        &reset      &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none &none &none &none &none &none &reset
+                        &none       &none           &none           &none           &none                           &bt_0 &bt_1 &out OUT_USB &none &none &none       &none &none &none &none &none
             >;
         };
 
-        // layer3
+        
         layer_BaseWin {
             bindings = <
-      &to 3   &to 4       &to 0     &none   &none                                                                                           &none   &none         &none   &none        &none
-      &none   &none       &none     &none   &none      &none                                                                        &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                        &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_win
-      &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                        &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_win
-      &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA        &sk LCTRL  &sk LGUI    &sk LALT   &kp RALT  &kp RGUI    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE    &mo 14  &lt 24 TAB  &kp RSHFT    &mo 12  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
+                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                          &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &none       &none       &none      &none    &none &none                                                                                                              &none &none &none &none        &none     &none
+                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                              &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                            &kp D &kp S &kp T &kp N        &kp B     &ime_on_nagi_win
+                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LCTRL        &sk LGUI         &none     &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo EDITWIN TAB &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
-        // layer4
+        
         layer_BaseMac {
             bindings = <
-      &to 3   &to 4       &to 0     &none   &none                                                                                             &none   &none         &none   &none        &none
-      &none   &none       &none     &none   &none      &none                                                                          &none   &none   &none         &none   &none        &none
-      &none   &none       &kp H     &kp O   &kp U      &kp X                                                                          &kp G   &kp C   &kp M         &kp R   &none        &ime_on_nagi_mac
-      &none   &kp Y       &kp I     &kp E   &kp A    &kp DOT                                                                          &kp D   &kp S   &kp T         &kp N   &kp B  &ime_on_mac
-      &none   &none  &kp LS(N2)  &kp EXCL   &kp K  &kp COMMA         &sk LGUI  &sk LCTRL    &sk LALT   &kp RALT  &kp RCTRL    &mo 7   &kp W   &kp F   &kp L         &kp P   &none        &none
- &magic 2 0   &none  &kp LS(N7)     &kp Q   &kp J             &mt LSHFT SPACE     &mo 15  &lt 24 TAB  &kp RSHFT     &mo 13  &kp RET           &kp V   &kp Z  &kp LS(FSLH)   &none        &none
+                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                          &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &none       &none       &none      &none    &none &none                                                                                                              &none &none &none &none        &none     &none
+                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                              &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                            &kp D &kp S &kp T &kp N        &kp B     &ime_on_nagi_mac
+                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL        &none     &skq RALT  &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo EDITMAC TAB &skq LALT &skq RSHFT &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
-        // layer5
+        
         layer_KanaWin {
             bindings = <
-        &none      &none   &none   &none   &none                                                                             &none   &none      &none    &none   &none
-        &none      &none   &none   &none   &none   &none                                                             &none   &none   &none      &none    &none   &none
-        &none      &none   &kp M   &kp R   &kp S   &kp H                                                             &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
- &ime_off_win  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                             &kp P   &kp A   &kp I      &kp U  &kp DOT   &none
-        &none      &none   &kp B   &kp W   &kp Z   &kp G  &sk LCTRL  &sk LGUI    &sk LALT   &none   &none    &mo 7   &kp X   &kp F   &kp V      &nn    &none   &none
-        &none      &none   &none   &none   &none          &kp SPACE    &mo 14  &lt 24 TAB   &none  &mo 12  &kp RET           &none   &none      &none    &none   &none
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &none &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &none     &none &none                         &none              &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win UTILWINKANA 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
             >;
         };
 
-        // layer6
+        
         layer_KanaMac {
             bindings = <
-        &none      &none   &none   &none   &none                                                                              &none   &none      &none    &none   &none
-        &none      &none   &none   &none   &none   &none                                                              &none   &none   &none      &none    &none   &none
-        &none      &none   &kp M   &kp R   &kp S   &kp H                                                              &kp Y   &kp E   &kp O  &kp MINUS    &none   &none
- &ime_off_mac  &kp COMMA   &kp K   &kp T   &kp N   &kp D                                                              &kp P   &kp A   &kp I      &kp U  &kp DOT   &none
-        &none      &none   &kp B   &kp W   &kp Z   &kp G   &sk LGUI  &sk LCTRL    &sk LALT   &none   &none    &mo 7   &kp X   &kp F   &kp V      &nn    &none   &none
-        &none      &none   &none   &none   &none          &kp SPACE     &mo 15  &lt 24 TAB   &none  &mo 13  &kp RET           &none   &none      &none    &none   &none
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &none &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &none     &none &none                         &none              &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
 
-        // layer7
-        layer_Symbol {
+        
+        layer_SymbolWIN {
             bindings = <
-        &none         &none          &none          &none        &none                                                                                   &none          &none                &none         &none   &none
-        &none         &none          &none          &none        &none         &none                                                       &none         &none          &none                &none         &none   &none
-        &none    &kp LS(N7)  &kp LS(COMMA)  &kp LS(MINUS)  &kp LS(DOT)      &kp LBKT                                                  &kp LS(N3)      &kp RBKT   &kp LS(INT1)      &kp NON_US_HASH  &kp LS(FSLH)   &none
-        &none      &kp INT1     &kp LS(N8)      &kp MINUS   &kp LS(N9)  &kp LS(SEMI)                                                  &kp LS(N5)  &kp LS(RBKT)       &kp SEMI  &kp LS(NON_US_HASH)  &kp LS(LBKT)   &none
-        &none  &kp LA(INT3)    &kp LS(SQT)        &kp SQT     &kp FSLH    &kp LS(N4)   &none   &none   &none   &none   &none   &none   &kp EQUAL  &kp LS(INT3)  &kp LS(EQUAL)           &kp LS(N6)         &none   &none
-        &none         &none          &none          &none        &none                 &none   &none   &none   &none   &none   &none                     &none          &none                &none         &none   &none
+                        &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
+                        &none &none        &none         &none         &none       &none                                            &none      &none        &none         &none               &none        &none
+                        &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                         &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
+                        &none &kp INT1     &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                     &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
+                        &none &kp LA(INT3) &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none &none &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
+                        &none &none        &none         &none         &none                    &none &none &none &none &none &none            &none        &none         &none               &none        &none
             >;
         };
 
-        // layer8
+        layer_SymbolMAC {
+            bindings = <
+                        &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
+                        &none &none        &none         &none         &none       &none                                            &none      &none        &none         &none               &none        &none
+                        &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                         &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
+                        &none &kp LA(INT3) &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                     &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
+                        &none &kp INT1     &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none &none &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
+                        &none &none        &none         &none         &none                    &none &none &none &none &none &none            &none        &none         &none               &none        &none
+            >;
+        };
+
+        
         layer_NaginataWin {
             bindings = <
-        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
-        &none  &none     &gi     &de    &zi     &none                                                                                 &none   &za     &zu     &be     &none  &none
-        &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
-&ime_off_win    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
-        &none  &di  &kp V      &kp F     &kp B       &kp C   &mo 9  &kp LS(COMMA)  &kp LS(RBKT) &kp LS(NON_US_HASH)  &kp LS(INT3)  &kp LS(DOT)  &kp Q  &kp U  &kp LS(N7)  &kp LS(N8)  &none  &none
-        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 14   &mo 24  &none   &mo 12  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none
+                        &none &none    &none     &none     &none                                                                                                                 &none  &none      &none      &none      &none
+                        &none &none    &none     &none     &none    &none                                                                                                  &none &none  &none      &none      &none      &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                              &kp Y &kp O  &kp DOT    &kp R      &none      &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                  &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &kp LS(RBKT)     &none &none      &kp LS(NON_US_HASH) &sl NAGINATADHWIN &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &none &skq RSHFT &mo UTILWIN         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
-        // layer9
-        layer_NaginateShiftWin {
+        
+        layer_NaginataShiftWin {
             bindings = <
-        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
-        &none  &none  &ge  &do  &du  &none                                                              &none  &pa  &pi  &pu  &none  &none
-        &none  &kp LBKT  &kp COMMA  &kp L  &kp SLASH  &kp N8                                                  &kp LS(N6)  &kp X  &kp N9  &kp N5 &none  &none
-        &none  &kp P  &kp N1  &kp I  &kp J  &kp A                                                  &kp N7  &kp K  &kp M  &kp 0  &ze  &none
-        &none  &none  &kp LS(N3)  &kp LS(E)  &kp LS(N4)  &kp N  &none  &none  &none  &none  &ba  &go  &kp N6  &bu  &kp NON_US_HASH  &kp N2  &none  &none
-        &none  &none  &bo  &kp LS(N5)  &kp LS(N6)          &none  &none  &none  &none  &bi  &kp ENTER          &gu  &pe  &po  &none  &none
+                        &none &none &none     &none &none                                                                       &none        &none           &none      &none      &none
+                        &none &none &none     &none &none     &none                                                  &none      &none        &none           &none      &none      &none
+                        &none &none &kp COMMA &kp L &kp SLASH &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5     &kp RBKT   &none
+                        &none &kp P &kp N1    &kp I &kp J     &kp A                                                  &kp N7     &kp K        &kp M           &kp N0     &kp LS(N8) &none
+                        &none &none &none     &none &none     &none  &none &none &none &none &none         &none     &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2     &kp LBKT   &none
+                        &none &none &none     &none &none            &none &none &none &none &kp LS(COMMA) &kp ENTER            &kp LS(N3)   &kp LS(E)       &kp LS(N4) &none      &none
             >;
         };
 
-        // leyer10
+        layer_NaginataDHWin {
+            bindings = <
+                        &none &none &none &none &none                                                           &none &none &none &none &none
+                        &none &none &none &none &none &none                                               &none &none &none &none &none &none
+                        &none &none &gi   &de   &zi   &di                                                 &za   &be   &zu   &da   &none &none
+                        &none &ze   &ge   &do   &ga   &du                                                 &gu   &pa   &pi   &pu   &pe   &none
+                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &none &none &none &none &none &none
+                        &none &none &bo   &po   &bu         &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
+            >;
+        };
         layer_NaginataMac {
             bindings = <
-        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
-        &none  &none     &gi     &de    &zi     &none                                                                                 &none   &za     &zu     &be     &none  &none
-        &none   &kp RBKT  &kp G  &kp W  &kp D  &kp LS(Z)                                                                                &kp Y  &kp O  &kp DOT  &kp R  &none  &none
-&ime_off_mac    &kp LS(N9) &kp SQT  &kp S  &kp T  &kp Z                                                                                &kp H  &kp N3  &kp E  &kp N4  &kp SEMI  &none
-        &none  &di  &kp V      &kp F     &kp B       &kp C   &mo 11  &kp LS(COMMA)  &kp LS(RBKT) &kp LS(NON_US_HASH)  &kp LS(INT3)  &kp LS(DOT)  &kp Q  &kp U  &kp LS(N7)  &kp LS(N8)  &none  &none
-        &none  &none  &kp LS(N0)  &kp INT1  &kp MINUS           &kp SPACE  &mo 15   &mo 24  &none   &mo 13  &kp ENTER                 &kp EQUAL  &ga  &da  &none  &none           
+                        &none &none    &none     &none     &none                                                                                                                 &none  &none      &none      &none      &none
+                        &none &none    &none     &none     &none    &none                                                                                                  &none &none  &none      &none      &none      &none
+                        &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                              &kp Y &kp O  &kp DOT    &kp R      &none      &none
+                        &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                  &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
+                        &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &kp LS(RBKT)     &none &none      &kp LS(NON_US_HASH) &sl NAGINATADHMAC &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &none &skq RSHFT &mo UTILMAC         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
-        // layer11
+        
         layer_NaginataShiftMac {
             bindings = <
-        &none  &none  &none  &none  &none                                                                                                &none  &none  &none  &none  &none
-        &none  &none  &ge  &do  &du  &none                                                              &none  &pa  &pi  &pu  &none  &none
-        &none  &kp LBKT  &kp COMMA  &kp L  &kp SLASH  &kp N8                                                  &kp LS(N6)  &kp X  &kp N9  &kp N5 &none  &none
-        &none  &kp P  &kp N1  &kp I  &kp J  &kp A                                                  &kp N7  &kp K  &kp M  &kp 0  &ze  &none
-        &none  &none  &kp LS(N3)  &kp LS(E)  &kp LS(N4)  &kp N  &none  &none  &none  &none  &ba  &go  &kp N6  &bu  &kp NON_US_HASH  &kp N2  &none  &none
-        &none  &none  &bo  &kp LS(N5)  &kp LS(N6)          &none  &none  &none  &none  &bi  &kp ENTER          &gu  &pe  &po  &none  &none
+                        &none &none &none     &none &none                                                                       &none        &none           &none      &none      &none
+                        &none &none &none     &none &none     &none                                                  &none      &none        &none           &none      &none      &none
+                        &none &none &kp COMMA &kp L &kp SLASH &kp N8                                                 &kp LS(N6) &kp X        &kp N9          &kp N5     &kp RBKT   &none
+                        &none &kp P &kp N1    &kp I &kp J     &kp A                                                  &kp N7     &kp K        &kp M           &kp N0     &kp LS(N8) &none
+                        &none &none &none     &none &none     &none  &none &none &none &none &none         &none     &kp N6     &kp LS(INT3) &kp NON_US_HASH &kp N2     &kp LBKT   &none
+                        &none &none &none     &none &none            &none &none &none &none &kp LS(COMMA) &kp ENTER            &kp LS(N3)   &kp LS(E)       &kp LS(N4) &none      &none
             >;
         };
 
-        // layer12
+        layer_NaginataDHMac {
+            bindings = <
+                        &none &none &none &none &none                                                           &none &none &none &none &none
+                        &none &none &none &none &none &none                                               &none &none &none &none &none &none
+                        &none &none &gi   &de   &zi   &di                                                 &za   &be   &zu   &da   &none &none
+                        &none &ze   &ge   &do   &ga   &du                                                 &gu   &pa   &pi   &pu   &pe   &none
+                        &none &none &bi   &ba   &go   &zo   &none     &none       &none &none &none &none &none &none &none &none &none &none
+                        &none &none &bo   &po   &bu         &kp SPACE &kp LS(DOT) &none &none &none &none       &none &none &none &none &none
+            >;
+        };
+
         layer_UtilWin {
             bindings = <
-  &none   &none        &none   &none             &none                                                                               &none   &none      &none   &none   &none
-  &none   &none        &none   &none             &none    &none                                                            &none     &none   &none      &none   &none   &none
-  &none  &kp N3       &kp N2  &kp N1            &kp N0   &kp N4                                                           &kp N7    &kp N6  &kp N5     &kp N9  &kp N8   &none
- &trans  &trans     &kp LGUI  &mo 16  &esc_ime_off_win  &kp TAB                                                         &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &henkan_win  &mo 18            &mo 20   &trans  &kp LCTRL  &kp LGUI  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
- &trans  &trans       &trans  &trans            &trans           &kp LSHFT    &mo 22    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+                        &none &none  &none       &none       &none                                                                              &none    &none    &none     &none  &none
+                        &none &none  &none       &none       &none          &none                                                      &none    &none    &none    &none     &none  &none
+                        &none &none  &kp N2      &kp N1      &kp N0         &kp N4                                                     &kp N7   &kp N6   &kp N5   &kp N9    &none  &none
+                        &none &kp N3 &none       &mo WORDWIN &mo FUNC       &none                                                      &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
+                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none  &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
+                        &none &none  &none       &none       &none                 &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none  &none
             >;
         };
 
-        //layer13
         layer_UtilMac {
             bindings = <
- &trans  &trans         &trans  &trans            &trans                                                                               &trans  &trans     &trans  &trans  &trans
- &trans  &trans         &trans  &trans            &trans   &trans                                                            &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &kp N3         &kp N2  &kp N1            &kp N0   &kp N4                                                            &kp N7    &kp N6  &kp N5     &kp N9  &kp N8  &trans
- &trans  &trans  &kp LA(SPACE)  &mo 17  &esc_ime_off_mac  &kp TAB                                                          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans    &henkan_mac  &mo 19            &mo 21   &trans   &kp LGUI  &kp LCTRL  &kp LALT  &trans  &trans  &trans    &trans  &kp BSPC  &trans     &trans  &trans  &trans
- &trans  &trans         &trans  &trans            &trans           &kp LSHFT     &mo 23    &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+                        &none          &none  &none       &none       &none                                                                              &none    &none         &none     &none  &none
+                        &none          &none  &none       &none       &none          &none                                                      &none    &none    &none         &none     &none  &none
+                        &none          &none  &kp N2      &kp N1      &kp N0         &kp N4                                                     &kp N7   &kp N6   &kp N5        &kp N9    &none  &kp LG(LS(N5))
+                        &kp LG(LS(N3)) &kp N3 &none       &mo WORDMAC &mo FUNC       &none                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &kp LG(LS(N4))
+                        &none          &none  &henkan_mac &mo LINEMAC &mo TABPAGEMAC &none  &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
+                        &none          &none  &none       &none       &none                 &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none  &none
+            >;
+        };
+        
+        layer_UtilWinKana {
+            bindings = <
+                        &none &none  &none       &none       &none                                                                              &none    &none    &none     &none  &none
+                        &none &none  &none       &none       &none          &none                                                      &none    &none    &none    &none     &none  &none
+                        &none &none  &k2win      &k1win      &k0win         &k4win                                                     &k7win   &k6win   &k5win   &k9win    &none  &none
+                        &none &k3win &none       &mo WORDWIN &mo FUNC       &none                                                      &kp LEFT &kp DOWN &kp UP   &kp RIGHT &k8win &none
+                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none  &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
+                        &none &none  &none       &none       &none                 &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none  &none
             >;
         };
 
-        // layer14
+        layer_UtilMacKana {
+            bindings = <
+                        &none          &none  &none       &none       &none                                                                              &none    &none         &none     &none  &none
+                        &none          &none  &none       &none       &none          &none                                                      &none    &none    &none         &none     &none  &none
+                        &none &none  &k2mac      &k1mac      &k0mac         &k4mac                                                     &k7mac   &k6mac   &k5mac   &k9mac    &none  &kp LG(LS(N5))
+                        &kp LG(LS(N3)) &k3mac &none       &mo WORDMAC &mo FUNC       &none                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &k8mac &kp LG(LS(N4))
+                        &none          &none  &henkan_mac &mo LINEMAC &mo TABPAGEMAC &none  &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
+                        &none          &none  &none       &none       &none                 &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none  &none
+            >;
+        };
+
+        
         layer_EditWin {
             bindings = <
-         &trans      &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
-         &trans      &trans              &trans        &trans            &trans         &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
-         &trans      &trans           &kp LC(W)  &kp LC(FSLH)  &toggle_fold_win  &fold_all_win                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &kp LC(LS(N3))  &kp LA(F4)  &window_change_win     &kp LC(C)         &kp LC(V)      &kp LC(S)                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &kp LC(LS(N4))      &trans              &mo 27     &kp LC(Y)         &kp LC(X)      &kp LC(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-         &trans      &trans              &trans        &trans         &kp LG(V)                 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+                        &none          &none      &none              &none         &none                                                                                 &none            &none          &none &none &none
+                        &none          &none      &none              &kp LG(LS(S)) &kp LG(PSCRN)    &none                                                          &none &none            &none          &none &none &none
+                        &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                                  &none &kp LC(J)        &none          &none &none &none
+                        &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                                      &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
+                        &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none        &none       &none &none            &none          &none &none &none
+                        &none          &none      &none              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &ime_on_win       &none            &none          &none &none &none
             >;
         };
 
-        // layer15
+            
         layer_EditMac {
             bindings = <
- &trans     &trans              &trans        &trans            &trans                                                                         &trans  &trans  &trans  &trans  &trans
- &trans     &trans              &trans        &trans            &trans         &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans           &kp LG(W)  &kp LG(FSLH)  &toggle_fold_mac  &fold_all_mac                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &kp LG(Q)  &window_change_mac     &kp LG(C)         &kp LG(V)      &kp LG(S)                                                  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans              &mo 28     &kp LG(Y)         &kp LG(X)      &kp LG(Z)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
- &trans     &trans              &trans        &trans     &kp LG(LS(V))                 &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+                        &none &none     &none              &none          &none                                                                                 &none            &none          &none &none &none
+                        &none &none     &kp LG(LS(N5))     &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                          &none &none            &none          &none &none &none
+                        &none &none     &kp LG(W)          &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                  &none &kp LG(J)        &none          &none &none &none
+                        &none &kp LG(Q) &window_change_mac &kp LG(C)      &kp LG(V)        &kp LG(S)                                                      &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
+                        &none &none     &mo WINDOWMOVEMAC  &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &none &none        &none       &none &none            &none          &none &none &none
+                        &none &none     &none              &none          &kp LG(LS(V))                  &none &none &none &none &ime_off_mac &ime_on_mac       &none            &none          &none &none &none
             >;
         };
 
-        // layer16
+        
         layer_WordWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LC(LEFT)     &kp PG_DN  &kp PG_UP  &kp LC(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LC(BSPC)     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                            &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &kp LC(LEFT) &kp PG_DN    &kp PG_UP &kp LC(RIGHT) &none &none
+                        &none &none &none &none &none &none &none     &none &none &none &none &none &none        &kp LC(BSPC) &none     &none         &none &none
+                        &none &none &none &none &none       &kp LSHFT &none &none &none &none &none              &none        &none     &none         &none &none
             >;
         };
 
-        // layer17
+        
         layer_WordMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LA(LEFT)     &kp PG_DN  &kp PG_UP  &kp LA(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LA(BSPC)     &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans     &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                            &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none     &none         &none &none
+                        &none &none &none &none &none &none                                         &kp LA(LEFT) &kp PG_DN    &kp PG_UP &kp LA(RIGHT) &none &none
+                        &none &none &none &none &none &none &none     &none &none &none &none &none &none        &kp LA(BSPC) &none     &none         &none &none
+                        &none &none &none &none &none       &kp LSHFT &none &none &none &none &none              &none        &none     &none         &none &none
             >;
         };
 
-        // layer18
+        
         layer_LineWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans            &trans        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp HOME       &kp LC(END)  &kp LC(HOME)  &kp END  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &delete_line_win        &trans   &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans        &trans   &trans  &trans  &trans
+                        &none &none &none &none &none                                                        &none            &none        &none   &none &none
+                        &none &none &none &none &none &none                                         &none    &none            &none        &none   &none &none
+                        &none &none &none &none &none &none                                         &none    &none            &none        &none   &none &none
+                        &none &none &none &none &none &none                                         &kp HOME &kp LC(END)      &kp LC(HOME) &kp END &none &none
+                        &none &none &none &none &none &none &none     &none &none &none &none &none &none    &delete_line_win &none        &none   &none &none
+                        &none &none &none &none &none       &kp LSHFT &none &none &none &none &none          &none            &none        &none   &none &none
             >;
         };
 
-        // layer19
+        
         layer_LineMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                 &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                           &trans        &trans      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                     &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp LG(BSPC)      &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &kp LSHFT  &trans  &trans  &trans  &trans  &trans                      &trans      &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                            &none        &none      &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none      &none         &none &none
+                        &none &none &none &none &none &none                                         &none        &none        &none      &none         &none &none
+                        &none &none &none &none &none &none                                         &kp LG(LEFT) &kp LG(DOWN) &kp LG(UP) &kp LG(RIGHT) &none &none
+                        &none &none &none &none &none &none &none     &none &none &none &none &none &none        &kp LG(BSPC) &none      &none         &none &none
+                        &none &none &none &none &none       &kp LSHFT &none &none &none &none &none              &none        &none      &none         &none &none
             >;
         };
 
-        // layer20
+        
         layer_TabpageWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none &none &none &none &none &none &none &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none       &none &none &none &none &none &none               &none        &none         &none         &none &none
             >;
         };
 
-        // layer21
+        
         layer_TabpageMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                                &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(PG_DN)  &kp LA(PG_UP)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                        &trans         &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                         &none         &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none         &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none         &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(PG_DN) &kp LA(PG_UP) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none &none &none &none &none &none &none &none         &none         &none         &none         &none &none
+                        &none &none &none &none &none       &none &none &none &none &none &none               &none         &none         &none         &none &none
             >;
         };
 
-        // layer22
+        
         layer_BrowserWin {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none &none &none &none &none &none &none &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none       &none &none &none &none &none &none               &none        &none         &none         &none &none
             >;
         };
 
-        // layer23
+        
         layer_BrowserMac {
             bindings = <
- &trans  &trans  &trans  &trans  &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans                                                  &kp LC(PG_UP)  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LC(PG_DN)  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LG(LEFT) &kp LG(RIGHT) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none &none &none &none &none &none &none &none         &none        &none         &none         &none &none
+                        &none &none &none &none &none       &none &none &none &none &none &none               &none        &none         &none         &none &none
             >;
         };
 
-        // layer24
+        
         layer_Func {
             bindings = <
- &trans  &trans  &trans   &trans   &trans                                                                        &trans        &trans  &trans   &trans  &trans
- &trans  &trans  &trans   &trans   &trans  &trans                                                  &trans        &trans        &trans  &trans   &trans  &trans
- &trans  &trans  &trans  &kp F11  &kp F12  &trans                                                  &trans  &kp C_VOL_DN  &kp C_VOL_UP  &trans   &trans  &trans
- &trans  &kp F1  &kp F2   &kp F3   &kp F4  &kp F5                                                  &kp F6        &kp F7        &kp F8  &kp F9  &kp F10  &trans
- &trans  &trans  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans  &trans   &trans  &trans
- &trans  &trans  &trans   &trans   &trans          &trans  &trans  &trans  &trans  &trans  &trans                &trans        &trans  &trans   &trans  &trans
+                        &none &none  &none  &none   &none                                                     &none   &none   &none   &none        &none
+                        &none &none  &none  &none   &none   &none                                      &none  &none   &none   &none   &none        &none
+                        &none &none  &none  &kp F11 &kp F12 &none                                      &kp F9 &kp F10 &kp F11 &kp F12 &none        &none
+                        &none &kp F1 &kp F2 &kp F3  &kp F4  &kp F5                                     &kp F5 &kp F6  &kp F7  &kp F8  &kp C_VOL_DN &kp C_VOL_UP
+                        &none &none  &none  &none   &none   &none  &none &none &none &none &none &none &kp F1 &kp F2  &kp F3  &kp F4  &none        &none
+                        &none &none  &none  &none   &none          &none &none &none &none &none &none        &none   &none   &none   &none        &none
             >;
         };
 
-        // layer25
+        
         layer_WindowChangeWin {
             bindings = <
- &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+                        &none &none &none &none    &none                                                        &none    &none  &none     &none &none
+                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
+                        &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
         };
 
-        // layer26
+        
         layer_WindowChangeMac {
             bindings = <
- &trans  &trans  &trans    &trans     &trans                                                                      &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans                                                    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans  &kp LEFT  &kp RIGHT  &trans                                                  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
- &trans  &trans  &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans  &trans
- &trans  &trans  &trans    &trans     &trans          &trans  &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans  &trans  &trans
+                        &none &none &none &none    &none                                                        &none    &none  &none     &none &none
+                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &kp DOWN &kp UP    &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
+                        &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
         };
 
-        // layer27
+        
         layer_WindowMoveWin {
             bindings = <
- &trans  &trans  &trans  &trans      &trans                                                                               &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans                                                        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &kp LG(UP)  &trans                                                  &kp LG(LEFT)  &kp LG(PG_DN)  &kp LG(PG_UP)  &kp LG(RIGHT)  &trans  &trans
- &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans         &trans         &trans  &trans  &trans
- &trans  &trans  &trans  &trans      &trans          &trans  &trans  &trans  &trans  &trans  &trans                       &trans         &trans         &trans  &trans  &trans
+                        &none &none &none &none &none                                                             &none         &none         &none         &none &none
+                        &none &none &none &none &none      &none                                     &none        &none         &none         &none         &none &none
+                        &none &none &none &none &none      &none                                     &none        &none         &none         &none         &none &none
+                        &none &none &none &none &kp LG(UP) &none                                     &kp LG(LEFT) &kp LG(PG_DN) &kp LG(PG_UP) &kp LG(RIGHT) &none &none
+                        &none &none &none &none &none      &none &none &none &none &none &none &none &none        &none         &none         &none         &none &none
+                        &none &none &none &none &none            &none &none &none &none &none &none              &none         &none         &none         &none &none
             >;
         };
 
-        // layer28
+        
         layer_WindowMoveMac {
             bindings = <
- &trans  &trans  &trans  &trans         &trans                                                                                      &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans                                                            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &kp LA(LG(F))  &trans                                                  &kp LA(LG(LEFT))  &kp LA(LG(DOWN))  &kp LA(LG(UP))  &kp LA(LG(RIGHT))  &trans  &trans
- &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans            &trans            &trans          &trans             &trans  &trans  &trans
- &trans  &trans  &trans  &trans         &trans          &trans  &trans  &trans  &trans  &trans  &trans                              &trans          &trans             &trans  &trans  &trans
+                        &none &none &none &none &none                                                                    &none                 &none                   &none             &none &none
+                        &none &none &none &none &none         &none                                     &none            &none                 &none                   &none             &none &none
+                        &none &none &none &none &none         &none                                     &none            &kp LA(LG(LS(COMMA))) &kp LA(LG(LS(DOT)))     &none             &none &none
+                        &none &none &none &none &kp LA(LG(F)) &none                                     &kp LA(LG(LEFT)) &kp LS(LA(LG(DOWN)))  &kp LS(LA(LG(UP)))      &kp LA(LG(RIGHT)) &none &none
+                        &none &none &none &none &none         &none &none &none &none &none &none &none &none            &kp LA(LG(RBKT))      &kp LA(LG(NON_US_HASH)) &none             &none &none
+                        &none &none &none &none &none               &none &none &none &none &none &none                  &none                 &none                   &none             &none &none
             >;
         };
 
