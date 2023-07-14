@@ -804,7 +804,7 @@
                         &none       &none       &none      &none    &none &none                                                                                                              &none &none &none &none        &none     &none
                         &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                              &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                            &kp D &kp S &kp T &kp N        &kp B     &ime_on_nagi_win
-                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LCTRL        &sk LGUI         &mo FUNC  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
+                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LCTRL        &sk LGUI         &none  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
                         &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo EDITWIN TAB &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
@@ -816,7 +816,7 @@
                         &none       &none       &none      &none    &none &none                                                                                                              &none &none &none &none        &none     &none
                         &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                              &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                            &kp D &kp S &kp T &kp N        &kp B     &ime_on_nagi_mac
-                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL        &mo FUNC  &skq RALT  &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL        &none  &skq RALT  &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
                         &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo EDITMAC TAB &skq LALT &skq RSHFT &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
@@ -828,7 +828,7 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &none     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &mo FUNC  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LGUI         &none  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITWIN TAB &skq LALT &none &rmo_esc_ime_off_win_kana 0 0 &rmo SYMBOLWIN RET                 &none &none &none     &none     &none
             >;
         };
@@ -840,7 +840,7 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &none &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &none     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &mo FUNC  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL        &none  &none &none                          &none &kp COMMA &kp X &kp V &none     &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &rmo EDITMAC TAB &skq LALT &none &rmo_esc_ime_off_mac_kana 0 0 &rmo SYMBOLMAC RET                 &none &none &none     &none     &none
             >;
         };
@@ -876,7 +876,7 @@
                         &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                                 &kp Y &kp O  &kp DOT    &kp R      &none      &none
                         &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                     &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
                         &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTWIN &kp LS(RBKT)     &none    &none      &kp LS(NON_US_HASH) &sl NAGINATADHWIN &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &mo FUNC &skq RSHFT &mo UTILWIN         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITWIN TAB &none &skq RSHFT &mo UTILWIN         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
@@ -909,7 +909,7 @@
                         &none &none    &kp G     &kp W     &kp D    &kp LS(Z)                                                                                                 &kp Y &kp O  &kp DOT    &kp R      &none      &none
                         &none &kp INT1 &kp SQT   &kp S     &kp T    &kp Z                                                                                                     &kp H &kp N3 &kp E      &kp N4     &kp LS(N5) &none
                         &none &none    &kp V     &kp F     &kp B    &kp C     &sl NAGINATASHIFTMAC &kp LS(RBKT)     &none    &none      &kp LS(NON_US_HASH) &sl NAGINATADHMAC &kp Q &kp U  &kp LS(N7) &kp LS(N0) &none      &none
-                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &mo FUNC &skq RSHFT &mo UTILMAC         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
+                        &none &none    &kp MINUS &kp EQUAL &kp SEMI           &kp SPACE            &rmo EDITMAC TAB &none &skq RSHFT &mo UTILMAC         &kp ENTER               &kp N  &kp LS(N9) &none      &none      &none
             >;
         };
 
@@ -942,7 +942,7 @@
                         &none &none  &none       &none       &none                                                                                    &none    &none    &none     &none  &none
                         &none &none  &none       &none       &none          &none                                                            &none    &none    &none    &none     &none  &none
                         &none &none  &kp N2      &kp N1      &kp N0         &kp N4                                                           &kp N7   &kp N6   &kp N5   &kp N9    &none  &none
-                        &none &kp N3 &none       &mo WORDWIN &none          &none                                                       &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
+                        &none &kp N3 &none       &mo WORDWIN &mo FUNC          &none                                                       &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
                         &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
                         &none &none  &none       &none       &none                       &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none  &none
             >;
@@ -953,7 +953,7 @@
                         &none          &none  &none       &none       &none                                                                                    &none    &none         &none     &none  &none
                         &none          &none  &none       &none       &none          &none                                                            &none    &none    &none         &none     &none  &none
                         &none          &none  &kp N2      &kp N1      &kp N0         &kp N4                                                           &kp N7   &kp N6   &kp N5        &kp N9    &none  &kp LG(LS(N5))
-                        &kp LG(LS(N3)) &kp N3 &none       &mo WORDMAC &none          &none                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &kp LG(LS(N4))
+                        &kp LG(LS(N3)) &kp N3 &none       &mo WORDMAC &mo FUNC          &none                                                      &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &kp LG(LS(N4))
                         &none          &none  &henkan_mac &mo LINEMAC &mo TABPAGEMAC &none &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
                         &none          &none  &none       &none       &none                       &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none  &none
             >;
@@ -967,7 +967,7 @@
                         &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                        &none &kp LC(J)        &none          &none &none &none
                         &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                            &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
                         &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none &none    &none &none            &none          &none &none &none
-                        &none          &none      &none              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &rmo_ime_on_win FUNC 0       &none            &none          &none &none &none
+                        &none          &none      &none              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &ime_on_win       &none            &none          &none &none &none
             >;
         };
 
@@ -979,7 +979,7 @@
                         &none &none     &kp LG(W)          &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                        &none &kp LG(J)        &none          &none &none &none
                         &none &kp LG(Q) &window_change_mac &kp LG(C)      &kp LG(V)        &kp LG(S)                                            &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
                         &none &none     &mo WINDOWMOVEMAC  &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &none &none &none    &none &none            &none          &none &none &none
-                        &none &none     &none              &none          &kp LG(LS(V))                  &none &none &none &none &ime_off_mac &rmo_ime_on_mac FUNC 0       &none            &none          &none &none &none
+                        &none &none     &none              &none          &kp LG(LS(V))                  &none &none &none &none &ime_off_mac &ime_on_mac       &none            &none          &none &none &none
             >;
         };
 
@@ -1084,9 +1084,9 @@
             bindings = <
                         &none &none  &none  &none   &none                                                     &none        &none        &none  &none   &none
                         &none &none  &none  &none   &none   &none                                      &none  &none        &none        &none  &none   &none
-                        &none &none  &none  &kp F11 &kp F12 &none                                      &none  &kp C_VOL_DN &kp C_VOL_UP &none  &none   &none
-                        &none &kp F1 &kp F2 &kp F3  &kp F4  &kp F5                                     &kp F6 &kp F7       &kp F8       &kp F9 &kp F10 &none
-                        &none &none  &none  &none   &none   &none  &none &none &none &none &none &none &none  &none        &none        &none  &none   &none
+                        &none &none  &none  &kp F11 &kp F12 &none                                      &kp F9  &kp F10 &kp F11 &kp F12  &none   &none
+                        &none &kp F1 &kp F2 &kp F3  &kp F4  &kp F5                                     &kp F5 &kp F6       &kp F7       &kp F8 &kp C_VOL_DN &kp C_VOL_UP
+                        &none &none  &none  &none   &none   &none  &none &none &none &none &none &none   &kp F1        &kp F2        &kp F3  &kp F4   &none &none
                         &none &none  &none  &none   &none          &none &none &none &none &none &none        &none        &none        &none  &none   &none
             >;
         };
