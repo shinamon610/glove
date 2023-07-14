@@ -1290,8 +1290,7 @@
                         &none &none  &none  &none   &none   &none  &none &none &none &none &none &none &kp F1 &kp F2  &kp F3  &kp F4  &none        &none
                         &none &none  &none  &none   &none          &none &none &none &none &none &none        &none   &none   &none   &none        &none
             >;
-        };
-
+        }; 
         
         layer_WindowChangeWin {
             bindings = <
@@ -1303,7 +1302,6 @@
                         &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
         };
-
         
         layer_WindowChangeMac {
             bindings = <
@@ -1315,7 +1313,6 @@
                         &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
         };
-
         
         layer_WindowMoveWin {
             bindings = <
