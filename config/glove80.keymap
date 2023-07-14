@@ -92,7 +92,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "rmo_esc_ime_off_win";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_win>;
@@ -101,7 +101,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "rmo_esc_ime_off_mac";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_mac>;
