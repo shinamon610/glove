@@ -881,7 +881,7 @@
         layer_SymbolWIN {
             bindings = <
                         &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
-                        &none &none        &none         &none         &none       &none                                            &none      &none        &none         &none               &none        &none
+                        &none &none        &none         &kp INT1      &none       &none                                            &none      &none        &kp LS(LBKT)  &none               &none        &none
                         &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                         &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
                         &none &kp INT1     &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                     &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
                         &none &kp LA(INT3) &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none &none &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
@@ -892,7 +892,7 @@
         layer_SymbolMAC {
             bindings = <
                         &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
-                        &none &none        &none         &none         &none       &none                                            &none      &none        &none         &none               &none        &none
+                        &none &none        &none         &kp LA(INT3)  &none       &none                                            &none      &none        &kp LS(LBKT)  &none               &none        &none
                         &none &kp LS(N7)   &kp LS(COMMA) &kp LS(MINUS) &kp LS(DOT) &kp LBKT                                         &kp LS(N3) &kp RBKT     &kp LS(INT1)  &kp NON_US_HASH     &kp LS(FSLH) &none
                         &none &kp LA(INT3) &kp LS(N8)    &kp MINUS     &kp LS(N9)  &kp LS(SEMI)                                     &kp LS(N5) &kp LS(RBKT) &kp SEMI      &kp LS(NON_US_HASH) &kp LS(LBKT) &none
                         &none &kp INT1     &kp LS(SQT)   &kp SQT       &kp FSLH    &kp LS(N4)   &none &none &none &none &none &none &kp EQUAL  &kp LS(INT3) &kp LS(EQUAL) &kp LS(N6)          &none        &none
