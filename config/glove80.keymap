@@ -24,6 +24,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 
+
 #define ORIGINAL_BASE 0
 #define ORIGINAL_LOWER 1
 #define ORIGINAL_MAGIC 2
@@ -128,7 +129,7 @@
             release-after-ms = <1000>;
             quick-release;
             ignore-modifiers;
-      };
+        };
     };
 
     macros {
