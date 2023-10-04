@@ -807,6 +807,39 @@
                 , < &kp LANG1>
                 ;
         };
+        ya: ya {
+            label = "ya";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp Y>
+                , < &kp A>
+                ;
+        };
+        yu: yu {
+            label = "yu";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp Y>
+                , < &kp U>
+                ;
+        };
+        yo: yo {
+            label = "yo";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp Y>
+                , < &kp O>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
@@ -879,7 +912,7 @@
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LCTRL   &sk LGUI  &none &none                              &none              &kp COMMA &none &none &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LCTRL   &sk LGUI  &none &none                              &none              &kp COMMA &yo   &yu   &ya       &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWINKANA 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
             >;
         };
@@ -891,7 +924,7 @@
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL   &none     &none &none                              &none              &kp COMMA &none &none &none     &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL   &none     &none &none                              &none              &kp COMMA &yo   &yu   &ya       &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
