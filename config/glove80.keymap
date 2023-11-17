@@ -134,60 +134,6 @@
         };
     };
 
-    macros {
-        rgb_ug_status_macro: rgb_ug_status_macro_0 {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
-        };
-    };
-
-    macros {
-        bt_0: bt_profile_macro_0 {
-            label = "BT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
-        };
-    };
-
-    macros {
-        bt_1: bt_profile_macro_1 {
-            label = "BT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
-        };
-    };
-
-    macros {
-        bt_2: bt_profile_macro_2 {
-            label = "BT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 2>;
-        };
-    };
-
-    macros {
-        bt_3: bt_profile_macro_3 {
-            label = "BT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 3>;
-        };
-    };
-
     magic: magic_hold_tap {
         compatible = "zmk,behavior-hold-tap";
         label = "MAGIC_HOLD_TAP";
@@ -197,8 +143,51 @@
         bindings = <&mo>, <&rgb_ug_status_macro>;
     };
 
-    /* Custom Defined Behaviors */
     macros {
+        rgb_ug_status_macro: rgb_ug_status_macro_0 {
+            label = "RGB_UG_STATUS";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&rgb_ug RGB_STATUS>;
+        };
+
+        bt_0: bt_profile_macro_0 {
+            label = "BT_0";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 0>;
+        };
+
+        bt_1: bt_profile_macro_1 {
+            label = "BT_1";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 1>;
+        };
+
+        bt_2: bt_profile_macro_2 {
+            label = "BT_2";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 2>;
+        };
+
+        bt_3: bt_profile_macro_3 {
+            label = "BT_3";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&out OUT_BLE>,
+                  <&bt BT_SEL 3>;
+        };
+
         ime_on_win: ime_on_win {
             label = "ime_on_win";
             compatible = "zmk,behavior-macro";
@@ -371,280 +360,6 @@
             bindings
                 = < &kp LG(K)>
                 , < &kp LG(N0)>
-                ;
-        };
-        ga: ga {
-            label = "ga";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp T &kp LBKT>
-                ;
-        };
-        gi: gi {
-            label = "gi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp G>
-                , < &kp LBKT>
-                ;
-        };
-        gu: gu {
-            label = "gu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp H>
-                , < &kp LBKT>
-                ;
-        };
-        ge: ge {
-            label = "ge";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp SINGLE_QUOTE>
-                , < &kp LBKT>
-                ;
-        };
-        go: go {
-            label = "go";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp B>
-                , < &kp LBKT>
-                ;
-        };
-        za: za {
-            label = "za";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp X>
-                , < &kp LBKT>
-                ;
-        };
-        zi: zi {
-            label = "zi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp D>
-                , < &kp LBKT>
-                ;
-        };
-        zu: zu {
-            label = "zu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp R>
-                , < &kp LBKT>
-                ;
-        };
-        ze: ze {
-            label = "ze";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp P>
-                , < &kp LBKT>
-                ;
-        };
-        zo: zo {
-            label = "zo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp C>
-                , < &kp LBKT>
-                ;
-        };
-        da: da {
-            label = "da";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp Q>
-                , < &kp LBKT>
-                ;
-        };
-        di: di {
-            label = "di";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp A>
-                , < &kp LBKT>
-                ;
-        };
-        du: du {
-            label = "du";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp Z>
-                , < &kp LBKT>
-                ;
-        };
-        de: de {
-            label = "de";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp W>
-                , < &kp LBKT>
-                ;
-        };
-        do: do {
-            label = "do";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp S>
-                , < &kp LBKT>
-                ;
-        };
-        ba: ba {
-            label = "ba";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp F>
-                , < &kp LBKT>
-                ;
-        };
-        bi: bi {
-            label = "bi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp V>
-                , < &kp LBKT>
-                ;
-        };
-        bu: bu {
-            label = "bu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp N2>
-                , < &kp LBKT>
-                ;
-        };
-        be: be {
-            label = "be";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp EQUAL>
-                , < &kp LBKT>
-                ;
-        };
-        bo: bo {
-            label = "bo";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp MINUS>
-                , < &kp LBKT>
-                ;
-        };
-        pa: pa {
-            label = "pa";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp F>
-                , < &kp RBKT>
-                ;
-        };
-        pi: pi {
-            label = "pi";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp V>
-                , < &kp RBKT>
-                ;
-        };
-        pu: pu {
-            label = "pu";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp N2>
-                , < &kp RBKT>
-                ;
-        };
-        pe: pe {
-            label = "pe";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp EQUAL>
-                , < &kp RBKT>
-                ;
-        };
-        po: po {
-            label = "po";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp MINUS>
-                , < &kp RBKT>
                 ;
         };
         nn: nn {
@@ -878,7 +593,7 @@
                         &none       &none           &none           &none           &none           &none                                                      &none &none &none &none &none &none
                         &none       &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                            &none &none &none &none &none &none
                         &bootloader &rgb_ug RGB_SPD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                            &none &none &none &none &none &bootloader
-                        &reset      &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none &none &none &none &none &none &reset
+                        &none      &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none &none &none &none &none &none &none
                         &none       &none           &none           &none           &none                           &bt_0 &bt_1 &out OUT_USB &none &none &none       &none &none &none &none &none
             >;
         };
