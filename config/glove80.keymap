@@ -898,12 +898,12 @@
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
-                        &none       &none       &none      &kp Y    &none &none                                                                                                                       &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT  &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &skq RSHFT &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &none       &none       &none      &kp Y    &none &none                                                                                                                          &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
@@ -932,6 +932,30 @@
         };
 
         
+        layer_PloverWin {
+            bindings = <
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
+                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
+            >;
+        };
+
+
+        layer_PloverMac {
+            bindings = <
+                        &none &none &none &none &none                                                       &none &none &none &none   &none
+                        &none &none &none &none &none &none                                           &none &none &none &none &none   &none
+                        &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp RBKT
+                        &none &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp SQT &kp L2(N2)
+                        &none &none &none &none &none &none &none &none &none &none       &none &none &none &none &none &none &none   &none
+                        &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none   &none
+            >;
+        };
+        
+
         layer_SymbolWIN {
             bindings = <
                         &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
