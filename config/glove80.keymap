@@ -664,7 +664,7 @@
                         &none &none &none &none &none                                                       &none &none &none &none   &none
                         &none &none &none &none &none &none                                           &none &none &none &none &none   &none
                         &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp RBKT
-                        &none &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp SQT &kp L2(N2)
+                        &none &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp SQT &kp LS(N2)
                         &none &none &none &none &none &none &none &none &none &none       &none &none &none &none &none &none &none   &none
                         &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none   &none
             >;
