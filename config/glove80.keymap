@@ -923,8 +923,8 @@
                         &none       &none       &none             &none     &none     &none                                                         &none &none  &none  &none  &none  &none
                         &none       &none       &kp F             &kp UP    &kp E     &kp P                                                         &none &none  &none  &none  &none  &none
                         &none       &kp G       &kp LEFT          &kp DOWN  &kp RIGHT &kp J                                                         &none &none  &none  &none  &none  &none
-                        &none       &none       &kp M             &kp C     &kp R     &none &kp SPACE      &kp LALT         &kp Y &none &none &none &none &none  &none  &none  &none  &none
-                        &none       &none       &none             &none     &none           &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &none &none       &none  &none  &none  &none  &none
+                        &none       &kp B       &kp M             &kp C     &kp R     &none &kp SPACE      &kp LALT         &kp Y &none &none &none &none &none  &none  &none  &none  &none
+                        &none       &none       &none             &none     &none           &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &kp ESC &none       &none  &none  &none  &none  &none
             >;
         };
     };
