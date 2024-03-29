@@ -55,6 +55,7 @@
 #define WINDOWCHANGEMAC 27
 #define WINDOWMOVEWIN 28
 #define WINDOWMOVEMAC 29
+#define OMEGA 30
 
 
 / {
