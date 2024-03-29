@@ -567,12 +567,12 @@
         
         layer_Base {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &kp F4   &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
-                        &kp EQUAL   &kp N1      &kp N2 &kp N3   &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-                        &kp TAB     &kp Q       &kp W  &kp E    &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                        &kp ESC     &kp A       &kp S  &kp D    &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                        &kp GRAVE   &kp Z       &kp X  &kp C    &kp V     &kp B  &kp LSHFT &kp LCTRL &lower   &kp LGUI &kp RCTRL &kp RSHFT &kp N        &kp M  &kp COMMA &kp DOT  &kp FSLH &kp PG_UP
-                        &magic 2 0  &kp F1      &kp F2 &kp LEFT &kp RIGHT        &kp BSPC  &kp DEL   &kp LALT &kp RALT &kp RET   &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp PG_DN
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
+                        &kp EQUAL   &kp N1      &kp N2            &kp N3    &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+                        &kp TAB     &kp Q       &kp W             &kp E     &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                        &kp ESC     &kp A       &kp S             &kp D     &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                        &kp GRAVE   &kp Z       &kp X             &kp C     &kp V     &kp B  &kp LSHFT &kp LCTRL &lower   &kp LGUI &kp RCTRL &kp RSHFT &kp N        &kp M  &kp COMMA &kp DOT  &kp FSLH &kp PG_UP
+                        &magic 2 0  &kp F1      &kp F2            &kp LEFT  &kp RIGHT        &kp BSPC  &kp DEL   &kp LALT &kp RALT &kp RET   &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp PG_DN
             >;
         };
 
@@ -594,7 +594,7 @@
                         &none       &none           &none           &none           &none           &none                                                      &none &none &none &none &none &none
                         &none       &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                            &none &none &none &none &none &none
                         &bootloader &rgb_ug RGB_SPD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_EFF                                            &none &none &none &none &none &bootloader
-                        &none      &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none &none &none &none &none &none &none
+                        &none       &none           &none           &none           &none           &none           &bt_2 &bt_3 &none        &none &none &none &none &none &none &none &none &none
                         &none       &none           &none           &none           &none                           &bt_0 &bt_1 &out OUT_USB &none &none &none       &none &none &none &none &none
             >;
         };
@@ -602,24 +602,24 @@
         
         layer_BaseWin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &none    &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
-                        &none       &none       &none      &kp Y    &none &none                                                                                                                       &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LCTRL        &sk LCTRL                 &sk LGUI  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo_ime_on_win EDITWIN 0 &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y     &none &none                                                                                                                       &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp LS(N2)        &kp EXCL  &kp K &kp COMMA &sk LCTRL        &sk LCTRL                 &sk LGUI  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7)        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_win EDITWIN 0 &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &none    &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
-                        &none       &none       &none      &kp Y    &none &none                                                                                                                          &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp LS(N2) &kp EXCL &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp LS(N7) &kp Q    &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp LS(N2)        &kp EXCL  &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7)        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
@@ -917,5 +917,15 @@
             >;
         };
 
+        layer_OMEGA {
+            bindings = <
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &kp F5                                                                        &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
+                        &none       &none       &kp F             &kp UP    &kp E     &kp P                                                         &none &none  &none  &none  &none  &none
+                        &none       &none       &kp LEFT          &kp DOWN  &kp RIGHT &kp J                                                         &none &none  &none  &none  &none  &none
+                        &none       &none       &kp M             &kp C     &none     &none                                                         &none &none  &none  &none  &none  &none
+                        &none       &none       &none             &none     &none     &none &kp SPACE      &kp LALT         &kp Y &none &none &none &none &none  &none  &none  &none  &none
+                        &none       &none       &none             &none     &none           &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &none &none       &none  &none  &none  &none  &none
+            >;
+        };
     };
 };
