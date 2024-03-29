@@ -567,7 +567,7 @@
         
         layer_Base {
             bindings = <
-                        &to BASEWIN &to BASEMAC &kp F3 &kp F4   &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &kp F4   &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
                         &kp EQUAL   &kp N1      &kp N2 &kp N3   &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
                         &kp TAB     &kp Q       &kp W  &kp E    &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
                         &kp ESC     &kp A       &kp S  &kp D    &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
@@ -602,7 +602,7 @@
         
         layer_BaseWin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &none    &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
                         &none       &none       &none      &kp Y    &none &none                                                                                                                       &none &none &kp B &none        &none     &none
                         &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
@@ -614,7 +614,7 @@
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to 0      &none    &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &none    &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
                         &none       &none       &none      &kp Y    &none &none                                                                                                                          &none &none &kp B &none        &none     &none
                         &none       &none       &kp H      &kp O    &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I      &kp E    &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
