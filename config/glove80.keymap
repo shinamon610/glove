@@ -922,7 +922,7 @@
                         &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &kp F5                                                                        &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
                         &none       &none       &none             &none     &none     &none                                                         &none &none  &none  &none  &none  &none
                         &none       &kp I       &kp F             &kp UP    &kp E     &kp P                                                         &none &none  &none  &none  &none  &none
-                        &none       &kp G       &kp LEFT          &kp DOWN  &kp RIGHT &kp J                                                         &none &none  &none  &none  &none  &none
+                        &none       &kp G       &kp LEFT          &kp S  &kp RIGHT &kp J                                                         &none &none  &none  &none  &none  &none
                         &none       &kp B       &kp M             &kp C     &kp R     &none &kp SPACE      &kp LALT         &kp Y &none &none &none &none &none  &none  &none  &none  &none
                         &none       &none       &none             &none     &none           &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &kp ESC &none       &none  &none  &none  &none  &none
             >;
