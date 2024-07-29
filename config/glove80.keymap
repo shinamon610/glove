@@ -395,14 +395,14 @@
                 , <&to BASEWIN>
                 ;
         };
-        bt_2_win: bt_2_win {
-            label = "bt_2_win";
+        bt_2_linux: bt_2_linux {
+            label = "bt_2_linux";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 2>
-                , <&to BASEWIN>
+                , <&to BASEMAC> // linuxはMACと同じキーバインドにしたい
                 ;
         };
         k0: k0 {
@@ -589,7 +589,7 @@
         };
 
         layer_Magic {
-            bindings = <
+           bindings = <
                         &bt BT_CLR  &none           &none           &none           &none                                                                            &none &none &none &none &bt BT_CLR_ALL
                         &none       &none           &none           &none           &none           &none                                                      &none &none &none &none &none &none
                         &none       &rgb_ug RGB_SPI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_BRI &rgb_ug RGB_TOG                                            &none &none &none &none &none &none
@@ -602,7 +602,7 @@
         
         layer_BaseWin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                   &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                   &none &none &bt_2_linux    &bt_0_mac &bt_1_win
                         &none       &none       &none             &kp Y     &none &none                                                                                                                       &none &none &kp B &none        &none     &none
                         &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
@@ -614,7 +614,7 @@
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                      &none &none &bt_2_win    &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                      &none &none &bt_2_linux    &bt_0_mac &bt_1_win
                         &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
                         &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
@@ -626,7 +626,7 @@
         
         layer_KanaWin {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
@@ -638,7 +638,7 @@
         
         layer_KanaMac {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
@@ -650,7 +650,7 @@
         
         layer_PloverWin {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_win &bt_0_mac &bt_1_win
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U     &kp V     &none
