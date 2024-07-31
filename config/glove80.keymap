@@ -806,7 +806,6 @@
             >;
         };
         
-        // 数字入力時にIME OFFになって、入力後にIME ONに戻ってくるために作った。
         layer_UtilWinKana {
             bindings = <
                         &none &none &none       &none       &none                                                                               &none    &none    &none     &none &none
