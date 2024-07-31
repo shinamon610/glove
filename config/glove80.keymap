@@ -56,13 +56,15 @@
 #define BROWSERWIN 28
 #define BROWSERMAC 29
 #define FUNC 30
-#define WINDOWCHANGEWIN 31
+#define WINDOWCHANGEWIN 31 
+// <-
 #define WINDOWCHANGEMAC 32
-#define WINDOWCHANGELINUX 33
-#define WINDOWMOVEWIN 34
+#define WINDOWCHANGELINUX 33 
+#define WINDOWMOVEWIN 34 
+// <-
 #define WINDOWMOVEMAC 35
 #define WINDOWMOVELINUX 36
-#define OMEGA 37
+#define OMEGA 37 
 
 
 / {
@@ -1022,40 +1024,6 @@
                         &none &none &none &none &kp LG(UP) &none                                     &kp LG(LEFT) &kp LG(PG_DN) &kp LG(PG_UP) &kp LG(RIGHT) &none &none
                         &none &none &none &none &none      &none &none &none &none &none &none &none &none        &none         &none         &none         &none &none
                         &none &none &none &none &none            &none &none &none &none &none &none              &none         &none         &none         &none &none
-            >;
-        };
-
-        
-        layer_WindowMoveMac {
-            bindings = <
-                        &none &none &none &none &none                                                                    &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &kp LA(LG(LS(COMMA))) &kp LA(LG(LS(DOT)))     &none             &none &none
-                        &none &none &none &none &kp LA(LG(F)) &none                                     &kp LA(LG(LEFT)) &kp LS(LA(LG(DOWN)))  &kp LS(LA(LG(UP)))      &kp LA(LG(RIGHT)) &none &none
-                        &none &none &none &none &none         &none &none &none &none &none &none &none &none            &kp LA(LG(RBKT))      &kp LA(LG(NON_US_HASH)) &none             &none &none
-                        &none &none &none &none &none               &none &none &none &none &none &none                  &none                 &none                   &none             &none &none
-            >;
-        };
-
-        layer_WindowMoveLinux {
-            bindings = <
-                        &none &none &none &none &none                                                                    &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &kp LA(LG(LS(COMMA))) &kp LA(LG(LS(DOT)))     &none             &none &none
-                        &none &none &none &none &kp LA(LG(F)) &none                                     &kp LA(LG(LEFT)) &kp LS(LA(LG(DOWN)))  &kp LS(LA(LG(UP)))      &kp LA(LG(RIGHT)) &none &none
-                        &none &none &none &none &none         &none &none &none &none &none &none &none &none            &kp LA(LG(RBKT))      &kp LA(LG(NON_US_HASH)) &none             &none &none
-                        &none &none &none &none &none               &none &none &none &none &none &none                  &none                 &none                   &none             &none &none
-            >;
-        };
-
-        layer_OMEGA {
-            bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &to BASELINUX                                                                       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-                        &none       &none       &none             &none     &none         &none                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp I       &kp F             &kp W     &kp E         &kp P                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp G       &kp LEFT          &kp S     &kp RIGHT     &kp J                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp B       &kp M             &kp C     &kp R         &none &kp SPACE      &kp LALT         &kp Y &none &none   &none &none &none  &none  &none  &none  &none
-                        &none       &none       &none             &none     &none               &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &kp ESC &none       &none  &none  &none  &none  &none
             >;
         };
     };
