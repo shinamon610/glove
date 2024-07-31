@@ -33,30 +33,41 @@
 #define BASELINUX 5
 #define KANAWIN 6
 #define KANAMAC 7
-#define PLOVERWIN 8
-#define PLOVERMAC 9
-#define SYMBOLWIN 10
-#define SYMBOLMAC 11
-#define UTILWIN  12
-#define UTILMAC 13
-#define UTILWINKANA  14
-#define UTILMACKANA 15
-#define EDITWIN 16
-#define EDITMAC 17
-#define WORDWIN 18
-#define WORDMAC 19
-#define LINEWIN 20
-#define LINEMAC 21
-#define TABPAGEWIN 22
-#define TABPAGEMAC 23
-#define BROWSERWIN 24
-#define BROWSERMAC 25
-#define FUNC 26
-#define WINDOWCHANGEWIN 27
-#define WINDOWCHANGEMAC 28
-#define WINDOWMOVEWIN 29
-#define WINDOWMOVEMAC 30
-#define OMEGA 31
+#define KANALINUX 8
+#define PLOVERWIN 9
+#define PLOVERMAC 10
+#define SYMBOLWIN 11
+#define SYMBOLMAC 12
+#define SYMBOLLINUX 13
+#define UTILWIN  14
+#define UTILMAC 15
+#define UTILLINUX 16
+#define UTILWINKANA  17
+#define UTILMACKANA 18
+#define UTILLINUXKANA 19
+#define EDITWIN 20
+#define EDITMAC 21
+#define EDITLINUX 22
+#define WORDWIN 23
+#define WORDMAC 24
+#define WORDLINUX 25
+#define LINEWIN 26
+#define LINEMAC 27
+#define LINELINUX 28
+#define TABPAGEWIN 29
+#define TABPAGEMAC 30
+#define TABPAGELINUX 31
+#define BROWSERWIN 32
+#define BROWSERMAC 33
+#define BROWSERLINUX 34
+#define FUNC 35
+#define WINDOWCHANGEWIN 36
+#define WINDOWCHANGEMAC 37
+#define WINDOWCHANGELINUX 38
+#define WINDOWMOVEWIN 39
+#define WINDOWMOVEMAC 40
+#define WINDOWMOVELINUX 41
+#define OMEGA 42
 
 
 / {
@@ -107,6 +118,15 @@
             retro-tap;
             bindings = <&mo>, <&ime_on_mac>;
         };
+        rmo_ime_on_linux: rmo_ime_on_linux {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_ime_on_linux";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&ime_on_linux>;
+        };
         rmo_esc_ime_off_win: rmo_esc_ime_off_win {
             compatible = "zmk,behavior-hold-tap";
             label = "rmo_esc_ime_off_win";
@@ -124,6 +144,15 @@
             tapping-term-ms = <0>;
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_mac>;
+        };
+        rmo_esc_ime_off_linux: rmo_esc_ime_off_linux {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_esc_ime_off_linux";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&esc_ime_off_linux>;
         };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
@@ -212,6 +241,17 @@
                 , <&to KANAMAC>
                 ;
         };
+        ime_on_linux: ime_on_linux {
+            label = "ime_on_linux";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to KANALINUX>
+                ;
+        };
         ime_off_win: ime_off_win {
             label = "ime_off_win";
             compatible = "zmk,behavior-macro";
@@ -232,6 +272,17 @@
             bindings
                 = <&kp LANG2>
                 , <&to BASEMAC>
+                ;
+        };
+        ime_off_linux: ime_off_linux {
+            label = "ime_off_linux";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG2>
+                , <&to BASELINUX>
                 ;
         };
         esc_ime_off_win: esc_ime_off_win {
@@ -256,6 +307,18 @@
                 = <&kp LANG2>
                 , <&kp ESC>
                 , <&to BASEMAC>
+                ;
+        };
+        esc_ime_off_linux: esc_ime_off_linux {
+            label = "esc_ime_off_linux";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG2>
+                , <&kp ESC>
+                , <&to BASELINUX>
                 ;
         };
         window_change_win: window_change_win {
@@ -403,7 +466,7 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 2>
-                , <&to BASEMAC> // linuxはMACと同じキーバインドにしたい
+                , <&to BASELINUX> 
                 ;
         };
         k0: k0 {
@@ -630,11 +693,10 @@
                         &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
                         &none       &none       &kp DQT        &kp EXCL  &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp SQT        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &none &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &magic 2 0  &none       &kp SQT        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_linux EDITLINUX 0 &skq LALT &none &rmo_esc_ime_off_linux UTILLINUX 0 &rmo SYMBOLLINUX RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
-        
         layer_KanaWin {
             bindings = <
                         &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
@@ -655,6 +717,17 @@
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
                         &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
+            >;
+        };
+
+        layer_KanaLinux {
+            bindings = <
+                        &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none       &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
+                        &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
+                        &none &none &kp B &kp W &nn   &kp G &none     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLINUX &skq LALT &none &rmo_esc_ime_off_linux UTILLINUXKANA 0 &rmo SYMBOLLINUX RET           &none &none &none       &none     &none
             >;
         };
 
