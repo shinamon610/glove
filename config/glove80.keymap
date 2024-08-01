@@ -454,7 +454,7 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 2>
-                , <&to BASEMAC> // linuxはMACと同じキーバインドにしたい
+                , <&to BASELIN> 
                 ;
         };
         k0: k0 {
