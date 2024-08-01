@@ -808,7 +808,7 @@
                         &none &none     &kp LG(W) &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                              &none &kp LG(J)        &kp LG(LS(N5)) &none &none &none
                         &none &kp LG(Q) &mo WINDOWCHANGELIN     &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                  &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
                         &none &none     &none     &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C))  &kp LC(LG(A)) &none &none            &none          &none &none &none
-                        &none &none     &none     &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_linux &none               &none            &none          &none &none &none
+                        &none &none     &none     &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_lin &none               &none            &none          &none &none &none
             >;
         };
         
