@@ -620,11 +620,11 @@
         layer_Base {
             bindings = <
                         &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
-                        &kp EQUAL   &kp N1      &kp N2            &kp N3    &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-                        &kp TAB     &kp Q       &kp W             &kp E     &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
-                        &kp ESC     &kp A       &kp S             &kp D     &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-                        &kp GRAVE   &kp Z       &kp X             &kp C     &kp V     &kp B  &kp LSHFT &kp LCTRL &lower   &kp LGUI &kp RCTRL &kp RSHFT &kp N        &kp M  &kp COMMA &kp DOT  &kp FSLH &kp PG_UP
-                        &magic 2 0  &kp F1      &kp F2            &kp LEFT  &kp RIGHT        &kp BSPC  &kp DEL   &kp LALT &kp RALT &kp RET   &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp PG_DN
+                        &kp EQUAL   &kp N1      &kp N2            &kp N3      &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+                        &kp TAB     &kp Q       &kp W             &kp E       &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
+                        &kp ESC     &kp A       &kp S             &kp D       &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+                        &kp GRAVE   &kp Z       &kp X             &kp C       &kp V     &kp B  &kp LSHFT &kp LCTRL &lower   &kp LGUI &kp RCTRL &kp RSHFT &kp N        &kp M  &kp COMMA &kp DOT  &kp FSLH &kp PG_UP
+                        &magic 2 0  &kp F1      &kp F2            &kp LEFT    &kp RIGHT        &kp BSPC  &kp DEL   &kp LALT &kp RALT &kp RET   &kp SPACE              &kp UP &kp DOWN  &kp LBKT &kp RBKT &kp PG_DN
             >;
         };
 
@@ -654,69 +654,69 @@
         
         layer_BaseWin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                   &none &none &bt_2_lin  &bt_0_mac &bt_1_win
-                        &none       &none       &none             &kp Y     &none &none                                                                                                                       &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp LS(N2)        &kp EXCL  &kp K &kp COMMA &sk LCTRL        &sk LCTRL                 &sk LGUI  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp LS(N7)        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_win EDITWIN 0 &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                   &none &none &bt_2_lin    &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y       &none &none                                                                                                                       &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O       &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E       &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp LS(N2)        &kp EXCL    &kp K &kp COMMA &sk LCTRL        &sk LCTRL                 &sk LGUI  &skq RALT  &skq RGUI                      &skq RCTRL         &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp LS(N7)        &kp Q       &kp J           &gqt LSHFT SPACE &rmo_ime_on_win EDITWIN 0 &skq LALT &skq RSHFT &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                      &none &none &bt_2_lin  &bt_0_mac &bt_1_win
-                        &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp DQT        &kp EXCL  &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp SQT        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                      &none &none &bt_2_lin    &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y       &none &none                                                                                                                          &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O       &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E       &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp DQT           &kp EXCL    &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp SQT           &kp Q       &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
 
         layer_BaseLin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                      &none &none &bt_2_lin  &bt_0_mac &bt_1_win
-                        &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
-                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
-                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp DQT        &kp EXCL  &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
-                        &magic 2 0  &none       &kp SQT        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_lin EDITLIN 0 &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                  &none &none &bt_2_lin    &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y       &none &none                                                                                                                      &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O       &kp U &kp X                                                                                                                      &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E       &kp A &kp DOT                                                                                                                    &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp DQT           &kp EXCL    &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp SQT           &kp Q       &kp J           &gqt LSHFT SPACE &rmo_ime_on_lin EDITLIN 0 &skq LALT &none     &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
         
         layer_KanaWin {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_lin &bt_0_mac &bt_1_win
-                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none       &none     &none
-                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
-                        &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &sk LGUI  &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET           &none &none &none       &none     &none
+                        &none &none &none &none &none                                                                                                         &none &none &bt_2_lin &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
+                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &sk LGUI  &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
             >;
         };
 
         
         layer_KanaMac {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_lin &bt_0_mac &bt_1_win
-                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none       &none     &none
-                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
-                        &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
+                        &none &none &none &none &none                                                                                                         &none &none &bt_2_lin &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
+                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
 
         layer_KanaLin {
             bindings = <
-                        &none &none &none &none &none                                                                                                             &none &none &bt_2_lin &bt_0_mac &bt_1_win
-                        &none &none &none &kp H &none &none                                                                                             &none     &none &none &none       &none     &none
-                        &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
-                        &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
+                        &none &none &none &none &none                                                                                                         &none &none &bt_2_lin &bt_0_mac &bt_1_win
+                        &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
+                        &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
+                        &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
+                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
         
@@ -803,12 +803,12 @@
 
         layer_EditLinux {
             bindings = <
-                        &none &none     &none     &none          &none                                                                                             &none            &none          &none &none &none
-                        &none &none     &kp LG(Q) &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                                      &none &none            &none          &none &none &none
-                        &none &none     &kp LG(W) &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                              &none &kp LG(J)        &kp LG(LS(N5)) &none &none &none
-                        &none &kp LG(Q) &mo WINDOWCHANGELIN     &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                  &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
-                        &none &none     &none     &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C))  &kp LC(LG(A)) &none &none            &none          &none &none &none
-                        &none &none     &none     &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_lin &none               &none            &none          &none &none &none
+                        &none &none     &none               &none          &none                                                                                            &none            &none          &none &none &none
+                        &none &none     &kp LG(Q)           &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                                     &none &none            &none          &none &none &none
+                        &none &none     &kp LG(W)           &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                             &none &kp LG(J)        &kp LG(LS(N5)) &none &none &none
+                        &none &kp LG(Q) &mo WINDOWCHANGELIN &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                 &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
+                        &none &none     &none               &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C)) &kp LC(LG(A)) &none &none            &none          &none &none &none
+                        &none &none     &none               &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_lin  &none               &none            &none          &none &none &none
             >;
         };
         
@@ -943,12 +943,12 @@
 
         layer_WindowChangeLinux {
             bindings = <
-                        &none &none &none &none    &none                                                        &none    &none  &none     &none &none
-                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &none &none    &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &none &none &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
-                        &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
+                        &none &none &none &none &none                                                                       &none         &none         &none      &none &none
+                        &none &none &none &none &none &none                                                       &none     &none         &none         &none      &none &none
+                        &none &none &none &none &none &none                                                       &none     &kp LA(LS(C)) &kp LA(N1)    &kp LA(N2) &none &none
+                        &none &none &none &none &none &none                                                       &kp LA(H) &kp LA(J)     &kp LA(K)     &kp LA(L)  &none &none
+                        &none &none &none &none &none &none &none &none &none &none &none           &kp LA(SPACE) &none     &none         &kp LA(LS(P)) &kp LA(P)  &none &none
+                        &none &none &none &none &none       &none &none &none &none &kp LA(LS(RET)) &kp LA(RET)             &none         &none         &none      &none &none
             >;
         };
         
