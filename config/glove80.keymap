@@ -30,18 +30,18 @@
 #define ORIGINAL_MAGIC 2
 #define BASEWIN 3
 #define BASEMAC 4
-#define KANAWIN 5
-#define KANAMAC 6
-#define PLOVERWIN 7
-#define PLOVERMAC 8
-#define SYMBOLWIN 9
-#define SYMBOLMAC 10
-#define UTILWIN  11
-#define UTILMAC 12
-#define UTILWINKANA  13
-#define UTILMACKANA 14
-#define EDITWIN 15
-#define EDITMAC 16
+#define BASELIN 5
+#define KANAWIN 6
+#define KANAMAC 7
+#define KANALIN 8
+#define PLOVERMAC 9
+#define SYMBOLWIN 10
+#define SYMBOLMAC 11
+#define UTILWIN  12
+#define UTILMAC 13
+#define EDITWIN 14
+#define EDITMAC 15
+#define EDITLIN 16
 #define WORDWIN 17
 #define WORDMAC 18
 #define LINEWIN 19
@@ -53,9 +53,9 @@
 #define FUNC 25
 #define WINDOWCHANGEWIN 26
 #define WINDOWCHANGEMAC 27
-#define WINDOWMOVEWIN 28
-#define WINDOWMOVEMAC 29
-#define OMEGA 30
+#define WINDOWCHANGELIN 28
+#define WINDOWMOVEWIN 29
+#define WINDOWMOVEMAC 30
 
 
 / {
@@ -106,6 +106,15 @@
             retro-tap;
             bindings = <&mo>, <&ime_on_mac>;
         };
+        rmo_ime_on_lin: rmo_ime_on_lin {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_ime_on_lin";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&ime_on_lin>;
+        };
         rmo_esc_ime_off_win: rmo_esc_ime_off_win {
             compatible = "zmk,behavior-hold-tap";
             label = "rmo_esc_ime_off_win";
@@ -123,6 +132,15 @@
             tapping-term-ms = <0>;
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_mac>;
+        };
+        rmo_esc_ime_off_lin: rmo_esc_ime_off_lin {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_esc_ime_off_lin";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&esc_ime_off_lin>;
         };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
@@ -211,6 +229,17 @@
                 , <&to KANAMAC>
                 ;
         };
+        ime_on_lin: ime_on_lin {
+            label = "ime_on_lin";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG1>
+                , <&to KANALIN>
+                ;
+        };
         ime_off_win: ime_off_win {
             label = "ime_off_win";
             compatible = "zmk,behavior-macro";
@@ -231,6 +260,17 @@
             bindings
                 = <&kp LANG2>
                 , <&to BASEMAC>
+                ;
+        };
+        ime_off_lin: ime_off_lin {
+            label = "ime_off_lin";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG2>
+                , <&to BASELIN>
                 ;
         };
         esc_ime_off_win: esc_ime_off_win {
@@ -255,6 +295,18 @@
                 = <&kp LANG2>
                 , <&kp ESC>
                 , <&to BASEMAC>
+                ;
+        };
+        esc_ime_off_lin: esc_ime_off_lin {
+            label = "esc_ime_off_lin";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG2>
+                , <&kp ESC>
+                , <&to BASELIN>
                 ;
         };
         window_change_win: window_change_win {
@@ -567,7 +619,7 @@
         
         layer_Base {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &kp F5                                                                                  &kp F6 &kp F7    &kp F8   &kp F9   &kp F10
                         &kp EQUAL   &kp N1      &kp N2            &kp N3    &kp N4    &kp N5                                                           &kp LS(LALT) &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
                         &kp TAB     &kp Q       &kp W             &kp E     &kp R     &kp T                                                            &kp Y        &kp U  &kp I     &kp O    &kp P    &kp BSLH
                         &kp ESC     &kp A       &kp S             &kp D     &kp F     &kp G                                                            &kp H        &kp J  &kp K     &kp L    &kp SEMI &kp SQT
@@ -602,7 +654,7 @@
         
         layer_BaseWin {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                   &none &none &bt_2_linux  &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                   &none &none &bt_2_linux  &bt_0_mac &bt_1_win
                         &none       &none       &none             &kp Y     &none &none                                                                                                                       &none &none &kp B &none        &none     &none
                         &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                       &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                     &kp D &kp S &kp T &kp N        &kp B     &none
@@ -614,7 +666,7 @@
         
         layer_BaseMac {
             bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &none                                                                                                                                      &none &none &bt_2_linux  &bt_0_mac &bt_1_win
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                      &none &none &bt_2_linux  &bt_0_mac &bt_1_win
                         &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
                         &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
@@ -623,6 +675,16 @@
             >;
         };
 
+        layer_BaseLin {
+            bindings = <
+                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to BASELIN &none                                                                                                                                      &none &none &bt_2_linux  &bt_0_mac &bt_1_win
+                        &none       &none       &none             &kp Y     &none &none                                                                                                                          &none &none &kp B &none        &none     &none
+                        &none       &none       &kp H             &kp O     &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
+                        &none       &kp Y       &kp I             &kp E     &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
+                        &none       &none       &kp DQT        &kp EXCL  &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &none     &skq RALT     &skq RCTRL                     &skq RGUI          &kp W &kp F &kp L &kp P        &none     &none
+                        &magic 2 0  &none       &kp SQT        &kp Q     &kp J           &gqt LSHFT SPACE &rmo_ime_on_lin EDITLIN 0 &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
+            >;
+        };
         
         layer_KanaWin {
             bindings = <
@@ -631,7 +693,7 @@
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
                         &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &sk LGUI  &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWINKANA 0 &rmo SYMBOLWIN RET           &none &none &none       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET           &none &none &none       &none     &none
             >;
         };
 
@@ -643,22 +705,21 @@
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
                         &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
             >;
         };
 
-        
-        layer_PloverWin {
+        layer_KanaLin {
             bindings = <
                         &none &none &none &none &none                                                                                                             &none &none &bt_2_linux &bt_0_mac &bt_1_win
                         &none &none &none &kp H &none &none                                                                                             &none     &none &none &none       &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                             &kp Y     &kp E &kp O &kp MINUS   &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                             &kp DOT   &kp A &kp I &kp U       &kp V     &none
                         &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                              &kp Z              &kp COMMA &yo   &yu   &ya         &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMACKANA 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none       &none     &none
             >;
         };
-
+        
 
         layer_PloverMac {
             bindings = <
@@ -716,50 +777,7 @@
             >;
         };
 
-        layer_UtilLinux {
-            bindings = <
-                        &none &none  &none       &none       &none                                                                               &none    &none         &none     &none  &none
-                        &none &none  &none       &kp N3      &none          &none                                                       &none    &none    &kp N8        &none     &none  &none
-                        &none &none  &kp N2      &kp N1      &kp N0         &kp N4                                                      &kp N7   &kp N6   &kp N5        &kp N9    &none  &none
-                        &none &kp N3 &none       &mo WORDWIN &mo FUNC       &kp TAB                                                     &kp LEFT &kp DOWN &kp UP        &kp RIGHT &kp N8 &none
-                        &none &none  &henkan_mac &mo LINEWIN &mo TABPAGEMAC &none   &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none  &none
-                        &none &none  &none       &none       &none                  &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none  &none
-            >;
-        };
-        
-        layer_UtilWinKana {
-            bindings = <
-                        &none &none &none       &none       &none                                                                               &none    &none    &none     &none &none
-                        &none &none &none       &k3         &none          &none                                                       &none    &none    &k8      &none     &none &none
-                        &none &none &k2         &k1         &k0            &k4                                                         &k7      &k6      &k5      &k9       &none &none
-                        &none &k3   &none       &mo WORDWIN &mo FUNC       &kp TAB                                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &k8   &none
-                        &none &none &henkan_win &mo LINEWIN &mo TABPAGEWIN &none   &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none &none
-                        &none &none &none       &none       &none                  &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none &none
-            >;
-        };
 
-        layer_UtilMacKana {
-            bindings = <
-                        &none &none &none       &none       &none                                                                               &none    &none         &none     &none &none
-                        &none &none &none       &k3         &none          &none                                                       &none    &none    &k8           &none     &none &none
-                        &none &none &k2         &k1         &k0            &k4                                                         &k7      &k6      &k5           &k9       &none &none
-                        &none &k3   &none       &mo WORDMAC &mo FUNC       &kp TAB                                                     &kp LEFT &kp DOWN &kp UP        &kp RIGHT &k8   &none
-                        &none &none &henkan_mac &mo LINEMAC &mo TABPAGEMAC &none   &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none &none
-                        &none &none &none       &none       &none                  &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none &none
-            >;
-        };
-
-        layer_UtilLinuxKana {
-            bindings = <
-                        &none &none &none       &none       &none                                                                               &none    &none         &none     &none &none
-                        &none &none &none       &k3         &none          &none                                                       &none    &none    &k8           &none     &none &none
-                        &none &none &k2         &k1         &k0            &k4                                                         &k7      &k6      &k5           &k9       &none &none
-                        &none &k3   &none       &mo WORDWIN &mo FUNC       &kp TAB                                                     &kp LEFT &kp DOWN &kp UP        &kp RIGHT &k8   &none
-                        &none &none &henkan_mac &mo LINEWIN &mo TABPAGEMAC &none   &kp LGUI  &kp LCTRL      &kp LALT &none &none &none &none    &kp BSPC &kp LA(SPACE) &none     &none &none
-                        &none &none &none       &none       &none                  &kp LSHFT &mo BROWSERMAC &none    &none &none &none          &none    &none         &none     &none &none
-            >;
-        };
-        
         layer_EditWin {
             bindings = <
                         &none          &none      &none              &none         &none                                                                           &none            &none          &none &none &none
@@ -788,7 +806,7 @@
                         &none &none     &none     &none          &none                                                                                             &none            &none          &none &none &none
                         &none &none     &kp LG(Q) &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                                      &none &none            &none          &none &none &none
                         &none &none     &kp LG(W) &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                              &none &kp LG(J)        &kp LG(LS(N5)) &none &none &none
-                        &none &kp LG(Q) &none     &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                  &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
+                        &none &kp LG(Q) &mo WINDOWCHANGELIN     &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                  &none &kp LG(LA(DOWN)) &kp LG(LA(UP)) &none &none &none
                         &none &none     &none     &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C))  &kp LC(LG(A)) &none &none            &none          &none &none &none
                         &none &none     &none     &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_linux &none               &none            &none          &none &none &none
             >;
@@ -927,8 +945,8 @@
             bindings = <
                         &none &none &none &none    &none                                                        &none    &none  &none     &none &none
                         &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &kp DOWN &kp UP    &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+                        &none &none &none &none &none    &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &none &none &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
                         &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
                         &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
@@ -954,28 +972,6 @@
                         &none &none &none &none &kp LA(LG(F)) &none                                     &kp LA(LG(LEFT)) &kp LS(LA(LG(DOWN)))  &kp LS(LA(LG(UP)))      &kp LA(LG(RIGHT)) &none &none
                         &none &none &none &none &none         &none &none &none &none &none &none &none &none            &kp LA(LG(RBKT))      &kp LA(LG(NON_US_HASH)) &none             &none &none
                         &none &none &none &none &none               &none &none &none &none &none &none                  &none                 &none                   &none             &none &none
-            >;
-        };
-
-        layer_WindowMoveLinux {
-            bindings = <
-                        &none &none &none &none &none                                                                    &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &none                 &none                   &none             &none &none
-                        &none &none &none &none &none         &none                                     &none            &kp LA(LG(LS(COMMA))) &kp LA(LG(LS(DOT)))     &none             &none &none
-                        &none &none &none &none &kp LA(LG(F)) &none                                     &kp LA(LG(LEFT)) &kp LS(LA(LG(DOWN)))  &kp LS(LA(LG(UP)))      &kp LA(LG(RIGHT)) &none &none
-                        &none &none &none &none &none         &none &none &none &none &none &none &none &none            &kp LA(LG(RBKT))      &kp LA(LG(NON_US_HASH)) &none             &none &none
-                        &none &none &none &none &none               &none &none &none &none &none &none                  &none                 &none                   &none             &none &none
-            >;
-        };
-
-        layer_OMEGA {
-            bindings = <
-                        &to BASEWIN &to BASEMAC &to ORIGINAL_BASE &to OMEGA &to BASELINUX                                                                       &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
-                        &none       &none       &none             &none     &none         &none                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp I       &kp F             &kp W     &kp E         &kp P                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp G       &kp LEFT          &kp S     &kp RIGHT     &kp J                                                           &none &none  &none  &none  &none  &none
-                        &none       &kp B       &kp M             &kp C     &kp R         &none &kp SPACE      &kp LALT         &kp Y &none &none   &none &none &none  &none  &none  &none  &none
-                        &none       &none       &none             &none     &none               &kp LEFT_SHIFT &kp LEFT_CONTROL &kp T &none &kp ESC &none       &none  &none  &none  &none  &none
             >;
         };
     };
