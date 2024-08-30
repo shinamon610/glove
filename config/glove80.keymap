@@ -803,12 +803,12 @@
             
         layer_EditMac {
             bindings = <
-                        &none &none     &none              &none          &none                                                                                            &none            &none             &none &none &none
-                        &none &none     &none              &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                                     &none &none            &none             &none &none &none
-                        &none &none     &kp LG(W)          &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                             &none &kp LG(J)        &toggle_panel_max &none &none &none
-                        &none &kp LG(Q) &window_change_mac &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                 &none &kp LG(LA(DOWN)) &kp LG(LA(UP))    &none &none &none
-                        &none &none     &mo WINDOWMOVEMAC  &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C)) &kp LC(LG(A)) &none &none            &none             &none &none &none
-                        &none &none     &none              &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_mac  &none               &none            &none             &none &none &none
+                        &none &none     &none               &none          &none                                                                                            &none            &none             &none &none &none
+                        &none &none     &none               &kp LG(LS(N4)) &kp LG(LS(N3))   &none                                                                     &none &none            &none             &none &none &none
+                        &none &none     &kp LG(W)           &kp LG(FSLH)   &toggle_fold_mac &fold_all_mac                                                             &none &kp LG(J)        &toggle_panel_max &none &none &none
+                        &none &kp LG(Q) &mo WINDOWCHANGEMAC &kp LG(C)      &kp LG(V)        &kp LG(S)                                                                 &none &kp LG(LA(DOWN)) &kp LG(LA(UP))    &none &none &none
+                        &none &none     &mo WINDOWMOVEMAC   &kp LG(Y)      &kp LG(X)        &kp LG(Z)     &none &none &none &kp LC(LG(E)) &kp LC(LG(C)) &kp LC(LG(A)) &none &none            &none             &none &none &none
+                        &none &none     &none               &none          &kp LG(LS(V))                  &none &none &none &none         &ime_off_mac  &none               &none            &none             &none &none &none
             >;
         };
 
@@ -943,12 +943,12 @@
         
         layer_WindowChangeMac {
             bindings = <
-                        &none &none &none &none    &none                                                        &none    &none  &none     &none &none
-                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &kp DOWN &kp UP    &none                                     &none    &none    &none  &none     &none &none
-                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
-                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
-                        &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
+                        &none &none &none &none     &none                                                                     &none           &none          &none          &none          &none
+                        &none &none &none &none     &none &none                                                 &none         &none           &none          &none          &none          &none
+                        &none &none &none &none     &none &none                                                 &none         &none           &kp LA(LS(N1)) &kp LA(LS(N2)) &none          &none
+                        &none &none &none &kp LCTRL &none &none                                                 &kp LA(LS(K)) &kp LA(LS(H))   &kp LA(LS(L))  &kp LA(LS(J))  &kp LA(LS(N3)) &none
+                        &none &none &none &none     &none &none &none &none &none &none &none &kp LA(LS(SPACE)) &none         &kp LA(LS(DOT)) &kp LA(LS(COMMA)) &none          &none          &none
+                        &none &none &none &none     &none       &none &none &none &none &none &kp LA(LS(RET))                 &none           &none          &none          &none          &none
             >;
         };
 
