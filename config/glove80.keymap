@@ -772,7 +772,7 @@
                         &none &none  &none       &kp N3      &none          &none                                                       &none    &none    &kp N8   &none     &none  &none
                         &none &none  &kp N2      &kp N1      &kp N0         &kp N4                                                      &kp N7   &kp N6   &kp N5   &kp N9    &none  &none
                         &none &kp N3 &none       &mo WORDWIN &mo FUNC       &kp TAB                                                     &kp LEFT &kp DOWN &kp UP   &kp RIGHT &kp N8 &none
-                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none   &kp LCTRL &kp LGUI       &kp LALT &none &none &none &none    &kp BSPC &kp LGUI &none     &none  &none
+                        &none &none  &henkan_win &mo LINEWIN &mo TABPAGEWIN &none   &kp LCTRL &kp LGUI       &kp LALT &none &none &none &kp DEL  &kp BSPC &kp LGUI &none     &none  &none
                         &none &none  &none       &none       &none                  &kp LSHFT &mo BROWSERWIN &none    &none &none &none          &none    &none    &none     &none  &none
             >;
         };
