@@ -932,12 +932,12 @@
         
         layer_WindowChangeWin {
             bindings = <
-                        &none &none &none &none    &none                                                        &none            &none             &none     &none &none
-                        &none &none &none &none    &none     &none                                     &none    &none            &none             &none     &none &none
-                        &none &none &none &none    &none     &none                                     &none    &kp LG(LC(LEFT)) &kp LG(LC(RIGHT)) &none     &none &none
-                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN         &kp UP            &kp RIGHT &none &none
-                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none            &none             &none     &none &none
-                        &none &none &none &none    &none           &none &none &none &none &none &none          &none            &none             &none     &none &none
+                        &none &none &none &none    &none                                                        &none    &none  &none     &none &none
+                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &none    &none     &none                                     &none    &none    &none  &none     &none &none
+                        &none &none &none &kp LEFT &kp RIGHT &none                                     &kp LEFT &kp DOWN &kp UP &kp RIGHT &none &none
+                        &none &none &none &none    &none     &none &none &none &none &none &none &none &none    &none    &none  &none     &none &none
+                        &none &none &none &none    &none           &none &none &none &none &none &none          &none    &none  &none     &none &none
             >;
         };
         
