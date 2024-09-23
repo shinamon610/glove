@@ -739,7 +739,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_tap_time 0>
-                , < &kp M &kp L>
+                , < &kp O &kp L>
                 ;
         };
         psqt: psqt {
