@@ -621,8 +621,8 @@
                 , < &kp M>
                 ;
         };
-        ao: ao {
-            label = "ao";
+        cv: cv {
+            label = "cv";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
@@ -630,6 +630,138 @@
             bindings
                 = <&macro_tap_time 0>
                 , < &kp C &kp V>
+                ;
+        };
+        qa: qa {
+            label = "qa";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp Q &kp A>
+                ;
+        };
+        ws: ws {
+            label = "ws";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp W &kp S>
+                ;
+        };
+        ed: ed {
+            label = "ed";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp E &kp D>
+                ;
+        };
+        rf: rf {
+            label = "rf";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp R &kp F>
+                ;
+        };
+        tg: tg {
+            label = "tg";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp T &kp G>
+                ;
+        };
+        mn: mn {
+            label = "mn";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp M &kp N>
+                ;
+        };
+        yh: yh {
+            label = "yh";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp Y &kp H>
+                ;
+        };
+        uj: uj {
+            label = "uj";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp U &kp J>
+                ;
+        };
+        ik: ik {
+            label = "ik";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp I &kp K>
+                ;
+        };
+        ol: ol {
+            label = "ol";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp M &kp L>
+                ;
+        };
+        psqt: psqt {
+            label = "psqt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp P &kp SQT>
+                ;
+        };
+        lbktdqt: lbktdqt {
+            label = "lbktdqt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp LBKT &kp DQT>
                 ;
         };
     };
@@ -747,9 +879,9 @@
             bindings = <
                         &none &none &none &none &none                                                       &none &none &none &none   &none
                         &none &none &none &none &none &none                                           &none &none &none &none &none   &none
-                        &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp RBKT
-                        &none &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp SQT &kp LS(N2)
-                        &none &none &none &none &none &none &ao &none &none &none       &none &none &none &none &none &none &none   &none
+                        &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp LBKT
+                        &none &qa   &ws   &ed   &rf   &tg                                             &yh   &uj   &ik   &ol   &psqt   &lbktdqt
+                        &none &kp A &kp S &kp D &kp F &kp G &cv   &none &none &none       &none &mn   &kp H &kp J &kp K &kp L &kp SQT &kp DQT
                         &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none   &none
             >;
         };
