@@ -621,6 +621,17 @@
                 , < &kp M>
                 ;
         };
+        ao: ao {
+            label = "ao";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&macro_tap_time 0>
+                , < &kp C &kp V>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
@@ -738,7 +749,7 @@
                         &none &none &none &none &none &none                                           &none &none &none &none &none   &none
                         &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp RBKT
                         &none &kp A &kp S &kp D &kp F &kp G                                           &kp H &kp J &kp K &kp L &kp SQT &kp LS(N2)
-                        &none &none &none &none &none &none &none &none &none &none       &none &none &none &none &none &none &none   &none
+                        &none &none &none &none &none &none &ao &none &none &none       &none &none &none &none &none &none &none   &none
                         &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none   &none
             >;
         };
