@@ -837,7 +837,7 @@
                         &none       &none       &none             &kp Y       &none &none                                                                                                                          &none &none &kp B &none        &none     &none
                         &none       &none       &kp H             &kp O       &kp U &kp X                                                                                                                          &kp G &kp C &kp M &kp R        &none     &none
                         &none       &kp Y       &kp I             &kp E       &kp A &kp DOT                                                                                                                        &kp D &kp S &kp T &kp N        &kp B     &none
-                        &none       &none       &kp DQT           &kp EXCL    &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &kp LSHFT     &skq RALT     &skq RCTRL                     &kp LG(LS(I))          &kp W &kp F &kp L &kp P        &none     &none
+                        &none       &none       &kp DQT           &kp EXCL    &kp K &kp COMMA &sk LGUI         &sk LCTRL                 &kp LSHFT &skq RALT     &skq RCTRL                     &kp LG(LS(I))      &kp W &kp F &kp L &kp P        &none     &none
                         &magic 2 0  &none       &kp SQT           &kp Q       &kp J           &gqt LSHFT SPACE &rmo_ime_on_mac EDITMAC 0 &skq LALT &to PLOVERMAC &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET       &kp V &kp Z &kp LS(FSLH) &none     &none
             >;
         };
@@ -859,7 +859,7 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &sk LGUI  &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LCTRL &sk LCTRL   &sk LGUI  &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITWIN &skq LALT &none &rmo_esc_ime_off_win UTILWIN 0 &rmo SYMBOLWIN RET           &none &none &none     &none     &none
             >;
         };
@@ -871,7 +871,7 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITMAC &skq LALT &none &rmo_esc_ime_off_mac UTILMAC 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
@@ -882,7 +882,7 @@
                         &none &none &none &kp H &none &none                                                                                         &none     &none &none &none     &none     &none
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
-                        &none &none &kp B &kp W &nn   &kp G &kp P     &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
+                        &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
                         &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
@@ -890,12 +890,12 @@
 
         layer_PloverMac {
             bindings = <
-                        &none &none &none &none &none                                                       &none &none &none &none   &none
-                        &none &none &none &none &none &none                                           &none &none &none &none &none   &none
-                        &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P   &kp LBKT
+                        &none &none &none &none &none                                                       &none &none &none &none    &none
+                        &none &none &none &none &none &none                                           &none &none &none &none &none    &none
+                        &none &kp Q &kp W &kp E &kp R &kp T                                           &kp Y &kp U &kp I &kp O &kp P    &kp LBKT
                         &none &qa   &ws   &ed   &rf   &tg                                             &yh   &uj   &ik   &ol   &psemi   &lbktsqt
                         &none &kp A &kp S &kp D &kp F &kp G &cv   &none &none &none       &none &mn   &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
-                        &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none   &none
+                        &none &none &none &none &none       &kp C &kp V &none &to BASEMAC &kp N &kp M       &none &none &none &none    &none
             >;
         };
         
