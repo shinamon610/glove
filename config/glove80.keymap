@@ -781,8 +781,8 @@
             label = "screenshot_edge";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <500>;
+            wait-ms = <300>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LC(LS(S))>
                 , < &kp TAB>
@@ -803,8 +803,8 @@
             label = "size_50";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <500>;
+            wait-ms = <300>;            
+            tap-ms = <0>;
             bindings
                 = < &kp LALT>
                 , < &kp J>
@@ -812,6 +812,8 @@
                 , < &kp S>
                 , < &kp Z>
                 , < &kp LS(LC(RIGHT))>
+                , < &kp N5>
+                , < &kp N0>
                 , < &kp RET>
                 ;
         };
