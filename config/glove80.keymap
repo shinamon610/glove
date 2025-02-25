@@ -781,7 +781,7 @@
             label = "screenshot_edge";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <300>;            
+            wait-ms = <200>;            
             tap-ms = <0>;
             bindings
                 = < &kp LC(LS(S))>
@@ -791,11 +791,17 @@
                 , < &kp RET>
                 , <&macro_pause_for_release>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp TAB>
+                , <&macro_tap_time 200>
                 , < &kp RET>
                 ;
         };
