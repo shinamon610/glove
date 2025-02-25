@@ -777,22 +777,6 @@
                 , <&macro_release &kp LBKT &kp SQT>
                 ;
         };
-        insert_image_excel: insert_image_excel {
-            label = "insert_image_excel";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;            
-            tap-ms = <0>;
-            bindings
-                = < &kp LALT>
-                , < &kp N>
-                , < &kp Z>
-                , < &kp I>
-                , < &kp P>
-                , < &kp O>
-                , < &kp D>
-                ;
-        };
         screenshot_edge: screenshot_edge {
             label = "screenshot_edge";
             compatible = "zmk,behavior-macro";
@@ -1006,7 +990,7 @@
                         &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                            &none &kp LC(J)        &kp LA(M)      &none &none &none
                         &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                                &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
                         &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none        &none &none &none            &none          &none &none &none
-                        &none          &none      &insert_image_excel              &size_50         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
+                        &none          &none      &size_50              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
             >;
         };
 
