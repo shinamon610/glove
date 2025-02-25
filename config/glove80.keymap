@@ -798,7 +798,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
-            tap-ms = <100>;
+            tap-ms = <500>;
             bindings
                 = < &kp LC(LS(S))>
                 , < &kp TAB>
@@ -812,6 +812,22 @@
                 , < &kp TAB>
                 , < &kp TAB>
                 , < &kp TAB>
+                , < &kp RET>
+                ;
+        };
+        size_50: size_50 {
+            label = "size_50";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <500>;
+            bindings
+                = < &kp LALT>
+                , < &kp J>
+                , < &kp P>
+                , < &kp S>
+                , < &kp Z>
+                , < &kp LS(LC(RIGHT))>
                 , < &kp RET>
                 ;
         };
@@ -990,7 +1006,7 @@
                         &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                            &none &kp LC(J)        &kp LA(M)      &none &none &none
                         &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                                &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
                         &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none        &none &none &none            &none          &none &none &none
-                        &none          &none      &insert_image_excel              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
+                        &none          &none      &insert_image_excel              &size_50         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
             >;
         };
 
