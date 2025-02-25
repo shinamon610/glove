@@ -793,6 +793,27 @@
                 , < &kp D>
                 ;
         };
+        screenshot_edge: screenshot_edge {
+            label = "screenshot_edge";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp LC(LS(S))>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp RET>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp TAB>
+                , < &kp RET>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
@@ -964,7 +985,7 @@
         layer_EditWin {
             bindings = <
                         &none          &none      &none              &none         &none                                                                           &none            &none          &none &none &none
-                        &none          &none      &kp LA(F4)         &kp LG(LS(S)) &kp LG(PSCRN)    &none                                                    &none &none            &none          &none &none &none
+                        &none          &none      &screenshot_edge         &kp LG(LS(S)) &kp LG(PSCRN)    &none                                                    &none &none            &none          &none &none &none
                         &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                            &none &kp LC(J)        &kp LA(M)      &none &none &none
                         &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                                &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
                         &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none        &none &none &none            &none          &none &none &none
