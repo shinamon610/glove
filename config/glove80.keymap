@@ -802,6 +802,8 @@
                 , <&macro_wait_time 200>
                 , < &kp TAB>
                 , <&macro_wait_time 200>
+                , < &kp TAB>
+                , <&macro_wait_time 200>
                 , < &kp RET>
                 ;
         };
