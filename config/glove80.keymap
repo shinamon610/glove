@@ -789,9 +789,7 @@
                 , < &kp TAB>
                 , < &kp TAB>
                 , < &kp RET>
-                , <&macro_wait_time 500>
-                , < &kp TAB>
-                , <&macro_wait_time 200>
+                , <&macro_wait_time 3000>
                 , < &kp TAB>
                 , <&macro_wait_time 200>
                 , < &kp TAB>
