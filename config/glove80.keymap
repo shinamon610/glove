@@ -789,7 +789,7 @@
                 , < &kp TAB>
                 , < &kp TAB>
                 , < &kp RET>
-                , <&macro_wait_time 3000>
+                , <&macro_pause_for_release>
                 , < &kp TAB>
                 , <&macro_wait_time 200>
                 , < &kp TAB>
