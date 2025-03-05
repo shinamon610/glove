@@ -815,7 +815,7 @@
             label = "size_50";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <300>;            
+            wait-ms = <100>;            
             tap-ms = <0>;
             bindings
                 = < &kp LALT>
