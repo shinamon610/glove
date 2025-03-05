@@ -805,7 +805,7 @@
                 , < &kp TAB>
                 , <&macro_wait_time 200>
                 , < &kp RET>
-                , <&macro_wait_time 200>
+                , <&macro_wait_time 500>
                 , < &kp ESC>
                 , <&macro_wait_time 200>
                 , < &kp ESC>
