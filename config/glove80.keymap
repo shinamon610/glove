@@ -805,6 +805,10 @@
                 , < &kp TAB>
                 , <&macro_wait_time 200>
                 , < &kp RET>
+                , <&macro_wait_time 200>
+                , < &kp ESC>
+                , <&macro_wait_time 200>
+                , < &kp ESC>
                 ;
         };
         size_50: size_50 {
@@ -996,11 +1000,11 @@
         layer_EditWin {
             bindings = <
                         &none          &none      &none              &none         &none                                                                           &none            &none          &none &none &none
-                        &none          &none      &screenshot_edge         &kp LG(LS(S)) &kp LG(PSCRN)    &none                                                    &none &none            &none          &none &none &none
+                        &none          &none      &none         &kp LG(LS(S)) &kp LG(PSCRN)    &none                                                    &none &none            &none          &none &none &none
                         &none          &none      &kp LC(W)          &kp LC(FSLH)  &toggle_fold_win &fold_all_win                                            &none &kp LC(J)        &kp LA(M)      &none &none &none
                         &kp LC(LS(N3)) &kp LA(F4) &window_change_win &kp LC(C)     &kp LC(V)        &kp LC(S)                                                &none &kp LC(LA(DOWN)) &kp LC(LA(UP)) &none &none &none
                         &kp LC(LS(N4)) &none      &mo WINDOWMOVEWIN  &kp LC(Y)     &kp LC(X)        &kp LC(Z)     &none &none &none &none &none        &none &none &none            &none          &none &none &none
-                        &none          &none      &size_50              &none         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
+                        &none          &none      &size_50              &screenshot_edge         &kp LG(V)                      &none &none &none &none &ime_off_win &none       &none            &none          &none &none &none
             >;
         };
 
