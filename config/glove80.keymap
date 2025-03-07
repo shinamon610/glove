@@ -1080,7 +1080,7 @@
                         &none &none &none &none &none                                                         &none        &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
-                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(LEFT) &kp LA(RIGHT) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(B) &kp LA(C) &kp LC(PG_DN) &none &none
                         &none &none &none &none &none &none &none &none &none &none &none &none &none         &none        &none         &none         &none &none
                         &none &none &none &none &none       &none &none &none &none &none &none               &none        &none         &none         &none &none
             >;
@@ -1092,7 +1092,7 @@
                         &none &none &none &none &none                                                         &none         &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none         &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none         &none         &none         &none &none
-                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(PG_DN) &kp LA(PG_UP) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LA(B) &kp LA(C) &kp LC(PG_DN) &none &none
                         &none &none &none &none &none &none &none &none &none &none &none &none &none         &none         &none         &none         &none &none
                         &none &none &none &none &none       &none &none &none &none &none &none               &none         &none         &none         &none &none
             >;
