@@ -617,7 +617,9 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &kp LG(K)>
+                = <&macro_press &kp LGUI>
+                , < &kp K>
+                , <&macro_release &kp LGUI>
                 , < &kp M>
                 ;
         };
