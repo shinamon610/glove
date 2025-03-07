@@ -1161,7 +1161,7 @@
                         &none &none &none &none      &none                                                                       &none       &none         &none      &none      &none
                         &none &none &none &none      &none &none                                                       &none     &none       &none         &none      &none      &none
                         &none &none &none &none      &none &none                                                       &none     &kp LA(N1)  &kp LA(N2)    &kp LA(N3) &none      &none
-                        &none &none &none &kp LSHIFT &none &none                                                       &kp LA(K) &kp LA(H)   &kp LA(L)     &kp LA(J)  &kp LA(N4) &none
+                        &none &none &none &kp LSHIFT &none &none                                                       &kp LA(H) &kp LA(J)   &kp LA(K)     &kp LA(L)  &kp LA(N4) &none
                         &none &none &none &none      &none &none &none &none &none &none &none           &kp LA(SPACE) &none     &kp LA(DOT) &kp LA(COMMA) &kp LA(P)  &none      &none
                         &none &none &none &none      &none       &none &none &none &none &kp LA(LS(RET)) &kp LA(RET)             &none       &none         &none      &none      &none
             >;
