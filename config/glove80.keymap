@@ -618,7 +618,8 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &kp LGUI>
-                , < &kp K>
+                , <&macro_press &kp K>
+                , <&macro_release &kp K>
                 , <&macro_release &kp LGUI>
                 , < &kp M>
                 ;
