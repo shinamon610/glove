@@ -621,6 +621,7 @@
                 , <&macro_press &kp K>
                 , <&macro_release &kp K>
                 , <&macro_release &kp LGUI>
+                , <&macro_wait_time 200>
                 , <&macro_press &kp M>
                 , <&macro_release &kp M>
                 ;
