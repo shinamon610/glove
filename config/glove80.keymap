@@ -1080,7 +1080,7 @@
                         &none &none &none &none &none                                                         &none        &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
                         &none &none &none &none &none &none                                     &none         &none        &none         &none         &none &none
-                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LC(LG(LEFT)) &kp LC(LG(RIGHT)) &kp LC(PG_DN) &none &none
+                        &none &none &none &none &none &none                                     &kp LC(PG_UP) &kp LC(LG(PG_DN)) &kp LC(LG(PG_UP)) &kp LC(PG_DN) &none &none
                         &none &none &none &none &none &none &none &none &none &none &none &none &none         &none        &none         &none         &none &none
                         &none &none &none &none &none       &none &none &none &none &none &none               &none        &none         &none         &none &none
             >;
