@@ -621,7 +621,8 @@
                 , <&macro_press &kp K>
                 , <&macro_release &kp K>
                 , <&macro_release &kp LGUI>
-                , < &kp M>
+                , <&macro_press &kp M>
+                , <&macro_release &kp M>
                 ;
         };
         cv: cv {
