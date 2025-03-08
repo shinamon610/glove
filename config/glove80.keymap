@@ -400,8 +400,15 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &kp LG(K)>
-                , < &kp LG(L)>
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp K>
+                , <&macro_release &kp K>
+                , <&macro_release &kp LGUI>
+                , <&macro_wait_time 200>
+                , <&macro_press &kp LGUI>
+                , <&macro_press &kp L>
+                , <&macro_release &kp L>
+                , <&macro_release &kp LGUI>
                 ;
         };
         fold_all_mac: fold_all_mac {
@@ -411,8 +418,15 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = < &kp LG(K)>
-                , < &kp LG(N0)>
+                = <&macro_press &kp LGUI>
+                , <&macro_press &kp K>
+                , <&macro_release &kp K>
+                , <&macro_release &kp LGUI>
+                , <&macro_wait_time 200>
+                , <&macro_press &kp LGUI>
+                , <&macro_press &kp N0>
+                , <&macro_release &kp N0>
+                , <&macro_release &kp LGUI>
                 ;
         };
         nn: nn {
