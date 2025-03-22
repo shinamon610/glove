@@ -1042,7 +1042,7 @@
                         &none &none         &kp LG(W)           &kp LG(FSLH) &kp LG(LC(LS(F))) &kp LG(LC(LS(A)))                                                             &none &kp LG(J)        &kp LG(LC(LS(M))) &none &none &none
                         &none &kp LA(LS(C)) &mo WINDOWCHANGELIN &kp LG(C)    &kp LG(V)         &kp LG(S)                                                                     &none &kp LG(LA(DOWN)) &kp LG(LA(UP))    &none &none &none
                         &none &none         &none               &kp LG(Y)    &kp LG(X)         &kp LG(Z)         &none &none &none &kp LC(LG(E)) &kp LC(LG(C)) &kp LC(LG(A)) &none &none            &none             &none &none &none
-                        &none &none         &none               &none        &kp LG(LS(V))                       &none &none &none &none         &ime_off_lin  &none               &none            &none             &none &none &none
+                        &none &none         &none               &kp LG(LC(LS(B)))        &kp LG(LS(V))                       &none &none &none &none         &ime_off_lin  &none               &none            &none             &none &none &none
             >;
         };
         
