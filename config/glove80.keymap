@@ -305,6 +305,8 @@
             tap-ms = <0>;
             bindings
                 = <&kp LANG2>
+                , <&kp A>
+                , <&kp BSPC>
                 , <&kp ESC>
                 , <&to BASELIN>
                 ;
