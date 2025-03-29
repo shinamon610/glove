@@ -142,6 +142,15 @@
             retro-tap;
             bindings = <&mo>, <&esc_ime_off_lin>;
         };
+        rmo_esc_ime_off_lin_for_kana: rmo_esc_ime_off_lin_for_kana {
+            compatible = "zmk,behavior-hold-tap";
+            label = "rmo_esc_ime_off_lin_for_kana";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <0>;
+            retro-tap;
+            bindings = <&mo>, <&esc_ime_off_lin_for_kana>;
+        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -299,6 +308,18 @@
         };
         esc_ime_off_lin: esc_ime_off_lin {
             label = "esc_ime_off_lin";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = <&kp LANG2>
+                , <&kp ESC>
+                , <&to BASELIN>
+                ;
+        };
+        esc_ime_off_lin_for_kana: esc_ime_off_lin_for_kana {
+            label = "esc_ime_off_lin_for_kana";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <0>;            
@@ -952,7 +973,7 @@
                         &none &none &kp M &kp R &kp S &kp H                                                                                         &kp Y     &kp E &kp O &kp MINUS &none     &none
                         &none &kp X &kp K &kp T &kp N &kp D                                                                                         &kp DOT   &kp A &kp I &kp U     &kp V     &none
                         &none &none &kp B &kp W &nn   &kp G &sk LGUI  &sk LCTRL   &none     &none &none                          &kp Z              &kp COMMA &yo   &yu   &ya       &none     &none
-                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
+                        &none &none &kp P &kp F &kp Z       &kp SPACE &mo EDITLIN &skq LALT &none &rmo_esc_ime_off_lin_for_kana UTILWIN 0 &rmo SYMBOLMAC RET           &none &none &none     &none     &none
             >;
         };
         
