@@ -365,7 +365,7 @@
             wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = <&kp LA(LS(B))>
+                = <&macro_tap &kp LA(LS(B))>
                 , <&mo WINDOWMOVEWIN>
                 ;
         };
