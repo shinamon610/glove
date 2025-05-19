@@ -878,6 +878,66 @@
                 , < &kp RET>
                 ;
         };
+        fss_open_win: fss_open_win {
+            label = "fss_open_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp INT1>
+                , < &kp f>
+                , <&kp LS(COMMA)>
+                , <&kp LS(COMMA)>
+                , <&kp SPACE>
+                , <&kp BSPC>
+                ;
+        };
+        fss_close_win: fss_close_win {
+            label = "fss_close_win";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp INT1>
+                , < &kp f>
+                , <&kp LS(DOT)>
+                , <&kp LS(DOT)>
+                , <&kp SPACE>
+                , <&kp BSPC>
+                ;
+        };
+        fss_open_mac: fss_open_mac {
+            label = "fss_open_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp BSLH>
+                , < &kp f>
+                , <&kp LS(COMMA)>
+                , <&kp LS(COMMA)>
+                , <&kp SPACE>
+                , <&kp BSPC>
+                ;
+        };
+        fss_close_mac: fss_close_mac {
+            label = "fss_close_mac";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;            
+            tap-ms = <0>;
+            bindings
+                = < &kp BSLH>
+                , < &kp f>
+                , <&kp LS(DOT)>
+                , <&kp LS(DOT)>
+                , <&kp SPACE>
+                , <&kp BSPC>
+                ;
+        };
     };
 
     /* Automatically generated keymap */
@@ -1000,7 +1060,6 @@
             >;
         };
         
-
         layer_SymbolWIN {
             bindings = <
                         &none &none        &none         &none         &none                                                                   &none        &none         &none               &none        &none
@@ -1011,7 +1070,7 @@
                         &none &none        &none         &none         &none                    &none &none &none &none &none &none            &none        &none         &none               &none        &none
             >;
         };
-
+ 
         layer_SymbolMAC {
             bindings = <
                         &none &none    &none         &none     &none                                                                  &none        &none     &none        &none     &none
