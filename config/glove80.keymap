@@ -878,7 +878,7 @@
                 , < &kp RET>
                 ;
         };
-        ss_open_win: fss_open_win {
+        fss_open_win: fss_open_win {
             label = "fss_open_win";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
