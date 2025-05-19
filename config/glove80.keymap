@@ -1108,7 +1108,6 @@
             >;
         };
 
-\f<<^\f<<\f<<\>>>>
         layer_EditWin {
             bindings = <
                         &none          &none      &none              &none            &none                                                                           &none            &none          &none &none &none
