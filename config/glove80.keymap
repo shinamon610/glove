@@ -878,7 +878,7 @@
                 , < &kp RET>
                 ;
         };
-        fss_open_win: fss_open_win {
+        ss_open_win: fss_open_win {
             label = "fss_open_win";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -917,8 +917,10 @@
             bindings
                 = <&kp BSLH>
                 , <&kp F>
-                , <&kp LS(COMMA)>
-                , <&kp LS(COMMA)>
+                , <&macro_press &kp LSHFT>
+                , <&kp COMMA>
+                , <&kp COMMA>
+                , <&macro_release &kp LSHFT>
                 , <&kp SPACE>
                 , <&kp BSPC>
                 ;
@@ -932,8 +934,10 @@
             bindings
                 = <&kp BSLH>
                 , <&kp F>
-                , <&kp LS(DOT)>
-                , <&kp LS(DOT)>
+                , <&macro_press &kp LSHFT>
+                , <&kp DOT>
+                , <&kp DOT>
+                , <&macro_release &kp LSHFT>
                 , <&kp SPACE>
                 , <&kp BSPC>
                 ;
@@ -1104,7 +1108,7 @@
             >;
         };
 
-
+\f<<^\f<<\f<<\>>>>
         layer_EditWin {
             bindings = <
                         &none          &none      &none              &none            &none                                                                           &none            &none          &none &none &none
