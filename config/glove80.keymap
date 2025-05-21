@@ -932,7 +932,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &kp LSHIFT>
-                , <&kp COMMA>
+                , <&macro_tap &kp COMMA>
                 , <&macro_release  &kp LSHIFT>
                 ;
         };
@@ -944,7 +944,7 @@
             tap-ms = <0>;
             bindings
                 = <&macro_press &kp RSHIFT>
-                , <&kp COMMA>
+                , <&macro_tap &kp COMMA>
                 , <&macro_release  &kp RSHIFT>
                 ;
         };
