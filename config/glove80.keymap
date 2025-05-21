@@ -928,7 +928,7 @@
             label = "fss_open_mac";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;            
+            wait-ms = <1000>;            
             tap-ms = <0>;
             bindings
                 = <&kp BSLH>
@@ -943,15 +943,10 @@
             label = "fss_close_mac";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;            
+            wait-ms = <1000>;            
             tap-ms = <0>;
             bindings
-                = <&kp BSLH>
-                , <&kp F>
-                , <&kp LS(DOT)>
-                , <&kp LS(DOT)>
-                , <&kp SPACE>
-                , <&kp BSPC>
+                = <&kp LS(DOT)>
                 ;
         };
     };
