@@ -928,24 +928,35 @@
             label = "fss_open_mac";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <1000>;            
+            wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = <&macro_press &kp LSHIFT>
+                = <&kp BSLH>
+                , <&kp F>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp COMMA>
                 , <&macro_tap &kp COMMA>
                 , <&macro_release  &kp LSHIFT>
+                , <&kp SPACE>
+                , <&kp BSPC>
                 ;
         };
         fss_close_mac: fss_close_mac {
             label = "fss_close_mac";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <1000>;            
+            wait-ms = <0>;            
             tap-ms = <0>;
             bindings
-                = <&macro_press &kp RSHIFT>
-                , <&macro_tap &kp COMMA>
-                , <&macro_release  &kp RSHIFT>
+                = <&kp BSLH>
+                , <&kp F>
+                , <&macro_press &kp LSHIFT>
+                , <&macro_tap &kp DOT>
+                , <&macro_tap &kp DOT>
+                , <&macro_release  &kp LSHIFT>
+                , <&kp SPACE>
+                , <&kp BSPC>
+                ;
                 ;
         };
     };
