@@ -931,12 +931,9 @@
             wait-ms = <1000>;            
             tap-ms = <0>;
             bindings
-                = <&kp BSLH>
-                , <&kp F>
-                , <&kp LS(COMMA)>
-                , <&kp LS(COMMA)>
-                , <&kp SPACE>
-                , <&kp BSPC>
+                = <&macro_press &kp LSHIFT>
+                , <&kp COMMA>
+                , <&macro_release  &kp LSHIFT>
                 ;
         };
         fss_close_mac: fss_close_mac {
@@ -946,7 +943,9 @@
             wait-ms = <1000>;            
             tap-ms = <0>;
             bindings
-                = <&kp LS(DOT)>
+                = <&macro_press &kp RSHIFT>
+                , <&kp COMMA>
+                , <&macro_release  &kp RSHIFT>
                 ;
         };
     };
