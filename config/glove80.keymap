@@ -937,8 +937,8 @@
                 , <&macro_tap &kp COMMA>
                 , <&macro_tap &kp COMMA>
                 , <&macro_release  &kp LSHIFT>
-                , <&kp SPACE>
-                , <&kp BSPC>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp BSPC>
                 ;
         };
         fss_close_mac: fss_close_mac {
@@ -954,8 +954,8 @@
                 , <&macro_tap &kp DOT>
                 , <&macro_tap &kp DOT>
                 , <&macro_release  &kp LSHIFT>
-                , <&kp SPACE>
-                , <&kp BSPC>
+                , <&macro_tap &kp SPACE>
+                , <&macro_tap &kp BSPC>
                 ;
         };
     };
